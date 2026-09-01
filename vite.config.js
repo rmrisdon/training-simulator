@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/training-simulator/', // Replace with your exact GitHub repo name
+  base: '/training-simulator/', // Ensures assets load relative to index.html
 })

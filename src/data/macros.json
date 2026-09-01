@@ -1,0 +1,1703 @@
+[
+  {
+    "title": "Assign ticket to :: Customer Care Tier 2",
+    "category": "Assign ticket to",
+    "subcategory": "Customer Care Tier 2",
+    "detail": "",
+    "description": "Send ticket to tier 2 customer service.",
+    "whenToUse": "Use Assign ticket to :: Customer Care Tier 2 when Send ticket to tier 2 customer service.",
+    "tags": "cust_care_escalate_to_cc_tier_2 transfer end_messaging_convo"
+  },
+  {
+    "title": "Assign ticket to :: Sales :: Send to APAC/LATAM",
+    "category": "Assign ticket to",
+    "subcategory": "Sales",
+    "detail": "Send to APAC/LATAM",
+    "description": "Asia Pacific & Latin America Sales team",
+    "whenToUse": "Use Assign ticket to :: Sales :: Send to APAC/LATAM when Asia Pacific & Latin America Sales team",
+    "tags": "send_to_apac"
+  },
+  {
+    "title": "Assign ticket to :: Sales :: Send to EMEA",
+    "category": "Assign ticket to",
+    "subcategory": "Sales",
+    "detail": "Send to EMEA",
+    "description": "Europe, Middle East & Africa Sales team",
+    "whenToUse": "Use Assign ticket to :: Sales :: Send to EMEA when Europe, Middle East & Africa Sales team",
+    "tags": "send_to_emea"
+  },
+  {
+    "title": "Assign ticket to :: Sales :: Send to Manila Sales",
+    "category": "Assign ticket to",
+    "subcategory": "Sales",
+    "detail": "Send to Manila Sales",
+    "description": "Assign ticket to Premier sales inbox for further assistance.",
+    "whenToUse": "Use Assign ticket to :: Sales :: Send to Manila Sales when Assign ticket to Premier sales inbox for further assistance.",
+    "tags": "send_to_manila_sales transfer"
+  },
+  {
+    "title": "Assign ticket to :: Sales :: Send to NORAM/COGONO",
+    "category": "Assign ticket to",
+    "subcategory": "Sales",
+    "detail": "Send to NORAM/COGONO",
+    "description": "North American Corporate, Government & Non-Profit sales team",
+    "whenToUse": "Use Assign ticket to :: Sales :: Send to NORAM/COGONO when North American Corporate, Government & Non-Profit sales team",
+    "tags": "send_to_noram sent_to_sales"
+  },
+  {
+    "title": "Assign ticket to :: Tech Support T2",
+    "category": "Assign ticket to",
+    "subcategory": "Tech Support T2",
+    "detail": "",
+    "description": "Assign ticket to tech support group for follow-up.",
+    "whenToUse": "Use Assign ticket to :: Tech Support T2 when Assign ticket to tech support group for follow-up.",
+    "tags": "customer_service_assign_to_support transfer end_messaging_convo"
+  },
+  {
+    "title": "Assign to Customer Care (ticket)",
+    "category": "Assign to Customer Care (ticket)",
+    "subcategory": "",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": "transfer_to_customer_service transfer"
+  },
+  {
+    "title": "Audiate :: Audiate Shuts Down (no message)",
+    "category": "Audiate",
+    "subcategory": "Audiate Shuts Down (no message)",
+    "detail": "",
+    "description": "Whenever Audiate shuts down without showing a message",
+    "whenToUse": "Use Audiate :: Audiate Shuts Down (no message) when Whenever Audiate shuts down without showing a message",
+    "tags": "audiate_shuts_down__no_message_"
+  },
+  {
+    "title": "Audiate :: Customer Service",
+    "category": "Audiate",
+    "subcategory": "Customer Service",
+    "detail": "",
+    "description": "Use any time there is an account related question.",
+    "whenToUse": "Use Audiate :: Customer Service when Use any time there is an account related question.",
+    "tags": "audiate_customer_service"
+  },
+  {
+    "title": "Audiate :: Enterprise",
+    "category": "Audiate",
+    "subcategory": "Enterprise",
+    "detail": "",
+    "description": "Use anytime the user has an Audiate deployment question.",
+    "whenToUse": "Use Audiate :: Enterprise when Use anytime the user has an Audiate deployment question.",
+    "tags": "audiate_enterprise"
+  },
+  {
+    "title": "Audiate :: Import Issues",
+    "category": "Audiate",
+    "subcategory": "Import Issues",
+    "detail": "",
+    "description": "use this when receiving an error on importing files",
+    "whenToUse": "Use Audiate :: Import Issues when use this when receiving an error on importing files",
+    "tags": "import_issues"
+  },
+  {
+    "title": "Audiate :: Other",
+    "category": "Audiate",
+    "subcategory": "Other",
+    "detail": "",
+    "description": "Customer question that is not a problem with the software or a directly training question",
+    "whenToUse": "Use Audiate :: Other when Customer question that is not a problem with the software or a directly training question",
+    "tags": "audiate_other"
+  },
+  {
+    "title": "Audiate :: Performance Issues",
+    "category": "Audiate",
+    "subcategory": "Performance Issues",
+    "detail": "",
+    "description": "Use when there is any complain about the software performance. Loading time, lag, etc.",
+    "whenToUse": "Use Audiate :: Performance Issues when Use when there is any complain about the software performance. Loading time, lag, etc.",
+    "tags": "performance_issues"
+  },
+  {
+    "title": "Audiate :: Problem",
+    "category": "Audiate",
+    "subcategory": "Problem",
+    "detail": "",
+    "description": "Use any time there is a problem with the software that does not fit in the other buckets. This is to be used when the software has a behavior that is not expected.",
+    "whenToUse": "Use Audiate :: Problem when Use any time there is a problem with the software that does not fit in the other buckets. This is to be used when the software has a behavior that is not expected.",
+    "tags": "audiate_problem"
+  },
+  {
+    "title": "Audiate :: Service Connection",
+    "category": "Audiate",
+    "subcategory": "Service Connection",
+    "detail": "",
+    "description": "Use this for any issue related to connecting to transcription service, avatar service, translation service, or any of our third party services.",
+    "whenToUse": "Use Audiate :: Service Connection when Use this for any issue related to connecting to transcription service, avatar service, translation service, or any of our third party services.",
+    "tags": "service_connection"
+  },
+  {
+    "title": "Audiate :: Service Quality",
+    "category": "Audiate",
+    "subcategory": "Service Quality",
+    "detail": "",
+    "description": "Use this when users have issues with the quality of any of Audiates features.",
+    "whenToUse": "Use Audiate :: Service Quality when Use this when users have issues with the quality of any of Audiates features.",
+    "tags": "service_quality"
+  },
+  {
+    "title": "Audiate :: Sign-in",
+    "category": "Audiate",
+    "subcategory": "Sign-in",
+    "detail": "",
+    "description": "Issues related to Sign in/entitlement",
+    "whenToUse": "Use Audiate :: Sign-in when Issues related to Sign in/entitlement",
+    "tags": "sign-in"
+  },
+  {
+    "title": "Audiate :: Training",
+    "category": "Audiate",
+    "subcategory": "Training",
+    "detail": "",
+    "description": "Use when the questions are related to training. How to's and Can I's.",
+    "whenToUse": "Use Audiate :: Training when Use when the questions are related to training. How to's and Can I's.",
+    "tags": "audiate_training"
+  },
+  {
+    "title": "Brand Confusion",
+    "category": "Brand Confusion",
+    "subcategory": "",
+    "detail": "",
+    "description": "For any tickets where the user is confused about our branding change. Camtasia Starter, Camtasia Snagit, Audiate w/ Camtasia etc.",
+    "whenToUse": "Use Brand Confusion when For any tickets where the user is confused about our branding change. Camtasia Starter, Camtasia Snagit, Audiate w/ Camtasia etc.",
+    "tags": "brand_change"
+  },
+  {
+    "title": "Camtasia (online) :: Camtasia Editor Export",
+    "category": "Camtasia (online)",
+    "subcategory": "Camtasia Editor Export",
+    "detail": "",
+    "description": "Choose this if there is a problem with a project that has been exported to Camtasia Editor (slow export, browser tab crashes.",
+    "whenToUse": "Use Camtasia (online) :: Camtasia Editor Export when Choose this if there is a problem with a project that has been exported to Camtasia Editor (slow export, browser tab crashes.",
+    "tags": "camtasia_editor_export"
+  },
+  {
+    "title": "Camtasia (online) :: Collaboration/Syncing",
+    "category": "Camtasia (online)",
+    "subcategory": "Collaboration/Syncing",
+    "detail": "",
+    "description": "Choose this if there is a problem or training related to collaboration (how to collaborate, project not syncing, etc.)",
+    "whenToUse": "Use Camtasia (online) :: Collaboration/Syncing when Choose this if there is a problem or training related to collaboration (how to collaborate, project not syncing, etc.)",
+    "tags": "collaboration_syncing"
+  },
+  {
+    "title": "Camtasia (online) :: Effects",
+    "category": "Camtasia (online)",
+    "subcategory": "Effects",
+    "detail": "",
+    "description": "Choose this when discussing training or problems related to the Effects section (missing effects, effects not applying to scene).",
+    "whenToUse": "Use Camtasia (online) :: Effects when Choose this when discussing training or problems related to the Effects section (missing effects, effects not applying to scene).",
+    "tags": "camo_effects"
+  },
+  {
+    "title": "Camtasia (online) :: Other",
+    "category": "Camtasia (online)",
+    "subcategory": "Other",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": "camo_other"
+  },
+  {
+    "title": "Camtasia (online) :: Playback Performance",
+    "category": "Camtasia (online)",
+    "subcategory": "Playback Performance",
+    "detail": "",
+    "description": "Choose this if there is a problem with playback performance (choppy editing, choppy preview)",
+    "whenToUse": "Use Camtasia (online) :: Playback Performance when Choose this if there is a problem with playback performance (choppy editing, choppy preview)",
+    "tags": "camo_playback_performance"
+  },
+  {
+    "title": "Camtasia (online) :: Problem",
+    "category": "Camtasia (online)",
+    "subcategory": "Problem",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": "problem"
+  },
+  {
+    "title": "Camtasia (online) :: Project Library",
+    "category": "Camtasia (online)",
+    "subcategory": "Project Library",
+    "detail": "",
+    "description": "Choose this when a user's project library is not showing projects or is behaving problematically (missing projects, projects not loading).",
+    "whenToUse": "Use Camtasia (online) :: Project Library when Choose this when a user's project library is not showing projects or is behaving problematically (missing projects, projects not loading).",
+    "tags": "project_library"
+  },
+  {
+    "title": "Camtasia (online) :: Screencast Export",
+    "category": "Camtasia (online)",
+    "subcategory": "Screencast Export",
+    "detail": "",
+    "description": "Choose this when exporting to Screencast is taking a long time or presents an error (slow export, browser tab crashes).",
+    "whenToUse": "Use Camtasia (online) :: Screencast Export when Choose this when exporting to Screencast is taking a long time or presents an error (slow export, browser tab crashes).",
+    "tags": "screencast_export"
+  },
+  {
+    "title": "Camtasia (online) :: Training",
+    "category": "Camtasia (online)",
+    "subcategory": "Training",
+    "detail": "",
+    "description": "Use when there are training questions for Camtasia Online. How to's and Can I's.",
+    "whenToUse": "Use Camtasia (online) :: Training when Use when there are training questions for Camtasia Online. How to's and Can I's.",
+    "tags": "camo_training"
+  },
+  {
+    "title": "Camtasia Editor :: Activating Subscriptions :: Error Activating with Software Key",
+    "category": "Camtasia Editor",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Error Activating with Software Key",
+    "description": "Any time a user has an issue trying to activate with A software key.",
+    "whenToUse": "Use Camtasia Editor :: Activating Subscriptions :: Error Activating with Software Key when Any time a user has an issue trying to activate with A software key.",
+    "tags": "error_activating_with_software_key"
+  },
+  {
+    "title": "Camtasia Editor :: Activating Subscriptions :: Exceed Activations",
+    "category": "Camtasia Editor",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Exceed Activations",
+    "description": "Customer gets message stating they are out of activations",
+    "whenToUse": "Use Camtasia Editor :: Activating Subscriptions :: Exceed Activations when Customer gets message stating they are out of activations",
+    "tags": "exceed_activations"
+  },
+  {
+    "title": "Camtasia Editor :: Activating Subscriptions :: No License Found",
+    "category": "Camtasia Editor",
+    "subcategory": "Activating Subscriptions",
+    "detail": "No License Found",
+    "description": "When signing into the software, customer gets message \"No License Found\"",
+    "whenToUse": "Use Camtasia Editor :: Activating Subscriptions :: No License Found when When signing into the software, customer gets message \"No License Found\"",
+    "tags": "no_license_found"
+  },
+  {
+    "title": "Camtasia Editor :: Activating Subscriptions :: Trial/Need Key Instead of Subscription",
+    "category": "Camtasia Editor",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Trial/Need Key Instead of Subscription",
+    "description": "When customer is on an individual subscription but are saying they are in trial mode or they need to enter a software key.",
+    "whenToUse": "Use Camtasia Editor :: Activating Subscriptions :: Trial/Need Key Instead of Subscription when When customer is on an individual subscription but are saying they are in trial mode or they need to enter a software key.",
+    "tags": "trial/need_key_instead_of_subscription"
+  },
+  {
+    "title": "Camtasia Editor :: Activating Subscriptions :: Unable to Sign-in",
+    "category": "Camtasia Editor",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Unable to Sign-in",
+    "description": "Customer gets an error about not being able to connect to the activation server",
+    "whenToUse": "Use Camtasia Editor :: Activating Subscriptions :: Unable to Sign-in when Customer gets an error about not being able to connect to the activation server",
+    "tags": "unable_to_sign-in"
+  },
+  {
+    "title": "Camtasia Editor :: Activating Subscriptions :: Wrong Email/Account",
+    "category": "Camtasia Editor",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Wrong Email/Account",
+    "description": "Customer using incorrect email when trying to activate/use the software",
+    "whenToUse": "Use Camtasia Editor :: Activating Subscriptions :: Wrong Email/Account when Customer using incorrect email when trying to activate/use the software",
+    "tags": "wrong_email/account"
+  },
+  {
+    "title": "Camtasia Editor :: Audio/Video Sync :: Exported Video",
+    "category": "Camtasia Editor",
+    "subcategory": "Audio/Video Sync",
+    "detail": "Exported Video",
+    "description": "Issues related to sync between audio/video after exporting",
+    "whenToUse": "Use Camtasia Editor :: Audio/Video Sync :: Exported Video when Issues related to sync between audio/video after exporting",
+    "tags": "audio_video_sync"
+  },
+  {
+    "title": "Camtasia Editor :: Audio/Video Sync :: Imported Media Playback",
+    "category": "Camtasia Editor",
+    "subcategory": "Audio/Video Sync",
+    "detail": "Imported Media Playback",
+    "description": "Issues related to sync between audio/video with imported media (not TREC's)",
+    "whenToUse": "Use Camtasia Editor :: Audio/Video Sync :: Imported Media Playback when Issues related to sync between audio/video with imported media (not TREC's)",
+    "tags": "audio_video_sync"
+  },
+  {
+    "title": "Camtasia Editor :: Audio/Video Sync :: TREC A/V Out of Sync",
+    "category": "Camtasia Editor",
+    "subcategory": "Audio/Video Sync",
+    "detail": "TREC A/V Out of Sync",
+    "description": "Issues related to sync between audio/video with TREC's",
+    "whenToUse": "Use Camtasia Editor :: Audio/Video Sync :: TREC A/V Out of Sync when Issues related to sync between audio/video with TREC's",
+    "tags": "audio_video_sync"
+  },
+  {
+    "title": "Camtasia Editor :: Crash",
+    "category": "Camtasia Editor",
+    "subcategory": "Crash",
+    "detail": "",
+    "description": "Use any time the crash message occurs when a user is using Camtasia Editor or Recorder.",
+    "whenToUse": "Use Camtasia Editor :: Crash when Use any time the crash message occurs when a user is using Camtasia Editor or Recorder.",
+    "tags": "crash_other"
+  },
+  {
+    "title": "Camtasia Editor :: Customer Care",
+    "category": "Camtasia Editor",
+    "subcategory": "Customer Care",
+    "detail": "",
+    "description": "Issues related to customer service, sales, keys, invoices, downloads etc.",
+    "whenToUse": "Use Camtasia Editor :: Customer Care when Issues related to customer service, sales, keys, invoices, downloads etc.",
+    "tags": "customer_solutions"
+  },
+  {
+    "title": "Camtasia Editor :: External Footage",
+    "category": "Camtasia Editor",
+    "subcategory": "External Footage",
+    "detail": "",
+    "description": "Issues related to videos from external sources not playing back correctly in the timeline/canvas.",
+    "whenToUse": "Use Camtasia Editor :: External Footage when Issues related to videos from external sources not playing back correctly in the timeline/canvas.",
+    "tags": "external_footage"
+  },
+  {
+    "title": "Camtasia Editor :: How To Edit Full Video",
+    "category": "Camtasia Editor",
+    "subcategory": "How To Edit Full Video",
+    "detail": "",
+    "description": "Customer looking for training help to edit their full video....one training question after another",
+    "whenToUse": "Use Camtasia Editor :: How To Edit Full Video when Customer looking for training help to edit their full video....one training question after another",
+    "tags": "edit_full_video"
+  },
+  {
+    "title": "Camtasia Editor :: Install/Uninstall Errors",
+    "category": "Camtasia Editor",
+    "subcategory": "Install/Uninstall Errors",
+    "detail": "",
+    "description": "Issues related to errors during installation or during an uninstall",
+    "whenToUse": "Use Camtasia Editor :: Install/Uninstall Errors when Issues related to errors during installation or during an uninstall",
+    "tags": "install_errors"
+  },
+  {
+    "title": "Camtasia Editor :: Other",
+    "category": "Camtasia Editor",
+    "subcategory": "Other",
+    "detail": "",
+    "description": "Customer question that is not a problem with the software or a directly training question",
+    "whenToUse": "Use Camtasia Editor :: Other when Customer question that is not a problem with the software or a directly training question",
+    "tags": "cs_other"
+  },
+  {
+    "title": "Camtasia Editor :: Passive",
+    "category": "Camtasia Editor",
+    "subcategory": "Passive",
+    "detail": "",
+    "description": "Use this when we send a user a passive Activation for Camtasia",
+    "whenToUse": "Use Camtasia Editor :: Passive when Use this when we send a user a passive Activation for Camtasia",
+    "tags": "yes_scalable_offline_activation"
+  },
+  {
+    "title": "Camtasia Editor :: Performance Issues :: Background Removal Performance",
+    "category": "Camtasia Editor",
+    "subcategory": "Performance Issues",
+    "detail": "Background Removal Performance",
+    "description": "Issues related to rendering performance with background removal enabled",
+    "whenToUse": "Use Camtasia Editor :: Performance Issues :: Background Removal Performance when Issues related to rendering performance with background removal enabled",
+    "tags": "background_removal_performance"
+  },
+  {
+    "title": "Camtasia Editor :: Performance Issues :: Performance Catch All",
+    "category": "Camtasia Editor",
+    "subcategory": "Performance Issues",
+    "detail": "Performance Catch All",
+    "description": "Any issues related to performance that are not timeline editing or background removal",
+    "whenToUse": "Use Camtasia Editor :: Performance Issues :: Performance Catch All when Any issues related to performance that are not timeline editing or background removal",
+    "tags": "choppy_preview"
+  },
+  {
+    "title": "Camtasia Editor :: Performance Issues :: Timeline Editing",
+    "category": "Camtasia Editor",
+    "subcategory": "Performance Issues",
+    "detail": "Timeline Editing",
+    "description": "Any issues related to timeline editing performance",
+    "whenToUse": "Use Camtasia Editor :: Performance Issues :: Timeline Editing when Any issues related to timeline editing performance",
+    "tags": "choppy_preview"
+  },
+  {
+    "title": "Camtasia Editor :: Problem",
+    "category": "Camtasia Editor",
+    "subcategory": "Problem",
+    "detail": "",
+    "description": "Issues related to the software not working as designed or presenting error messages not related to any of the other categories",
+    "whenToUse": "Use Camtasia Editor :: Problem when Issues related to the software not working as designed or presenting error messages not related to any of the other categories",
+    "tags": "camtasia_problem"
+  },
+  {
+    "title": "Camtasia Editor :: Sign-in :: A Task Was Cancelled",
+    "category": "Camtasia Editor",
+    "subcategory": "Sign-in",
+    "detail": "A Task Was Cancelled",
+    "description": "The Sign-in Error has the content of \"A Task was Cancelled\"",
+    "whenToUse": "Use Camtasia Editor :: Sign-in :: A Task Was Cancelled when The Sign-in Error has the content of \"A Task was Cancelled\"",
+    "tags": "a_task_was_cancelled"
+  },
+  {
+    "title": "Camtasia Editor :: Sign-in :: One or More Errors Occurred",
+    "category": "Camtasia Editor",
+    "subcategory": "Sign-in",
+    "detail": "One or More Errors Occurred",
+    "description": "The Sign-in Error has the content of only \"One or More Errors Occurred\"",
+    "whenToUse": "Use Camtasia Editor :: Sign-in :: One or More Errors Occurred when The Sign-in Error has the content of only \"One or More Errors Occurred\"",
+    "tags": "one_or_more_errors_occurred"
+  },
+  {
+    "title": "Camtasia Editor :: Sign-in :: Other",
+    "category": "Camtasia Editor",
+    "subcategory": "Sign-in",
+    "detail": "Other",
+    "description": "A problem signing in that is not one of the other macros",
+    "whenToUse": "Use Camtasia Editor :: Sign-in :: Other when A problem signing in that is not one of the other macros",
+    "tags": "sign-in_error"
+  },
+  {
+    "title": "Camtasia Editor :: Sign-in :: Proxy Authentication",
+    "category": "Camtasia Editor",
+    "subcategory": "Sign-in",
+    "detail": "Proxy Authentication",
+    "description": "The Sign-in Error contains the following error: \"(407) Proxy Authentication Required\"",
+    "whenToUse": "Use Camtasia Editor :: Sign-in :: Proxy Authentication when The Sign-in Error contains the following error: \"(407) Proxy Authentication Required\"",
+    "tags": "proxy_authentication"
+  },
+  {
+    "title": "Camtasia Editor :: Sign-in :: Scope Invalid",
+    "category": "Camtasia Editor",
+    "subcategory": "Sign-in",
+    "detail": "Scope Invalid",
+    "description": "The Sign-in error states: \"Requested Scope was invalid, Response content: XXX\"",
+    "whenToUse": "Use Camtasia Editor :: Sign-in :: Scope Invalid when The Sign-in error states: \"Requested Scope was invalid, Response content: XXX\"",
+    "tags": "scope_invalid"
+  },
+  {
+    "title": "Camtasia Editor :: Training",
+    "category": "Camtasia Editor",
+    "subcategory": "Training",
+    "detail": "",
+    "description": "?Any sort of how to or best practice type question regarding Camtasia software only. If it’s not within the Camtasia software anywhere, then it’s not training.",
+    "whenToUse": "Use Camtasia Editor :: Training when ?Any sort of how to or best practice type question regarding Camtasia software only. If it’s not within the Camtasia software anywhere, then it’s not training.",
+    "tags": "cs_training"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Activating Subscriptions :: Error Activating with Software Key",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Error Activating with Software Key",
+    "description": "Use when a user has an issue with their license key.",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Activating Subscriptions :: Error Activating with Software Key when Use when a user has an issue with their license key.",
+    "tags": "error_activating_with_software_key"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Activating Subscriptions :: Exceed Activations",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Exceed Activations",
+    "description": "Customer gets message stating they are out of activations",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Activating Subscriptions :: Exceed Activations when Customer gets message stating they are out of activations",
+    "tags": "exceed_activations"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Activating Subscriptions :: No License Found",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Activating Subscriptions",
+    "detail": "No License Found",
+    "description": "When signing into the software, customer gets message \"No License Found\"",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Activating Subscriptions :: No License Found when When signing into the software, customer gets message \"No License Found\"",
+    "tags": "no_license_found"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Activating Subscriptions :: Trial/Need Key Instead of Subscription",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Trial/Need Key Instead of Subscription",
+    "description": "When customer is on an individual subscription but are saying they are in trial mode, or prompting for license key and not letting them activate.",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Activating Subscriptions :: Trial/Need Key Instead of Subscription when When customer is on an individual subscription but are saying they are in trial mode, or prompting for license key and not letting them activate.",
+    "tags": "trial/need_key_instead_of_subscription"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Activating Subscriptions :: Unable to Sign-in",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Unable to Sign-in",
+    "description": "Customer gets an error about not being able to connect to the activation server",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Activating Subscriptions :: Unable to Sign-in when Customer gets an error about not being able to connect to the activation server",
+    "tags": "unable_to_sign-in"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Activating Subscriptions :: Wrong Email/Account",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Wrong Email/Account",
+    "description": "Customer using incorrect email when trying to activate/use the software",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Activating Subscriptions :: Wrong Email/Account when Customer using incorrect email when trying to activate/use the software",
+    "tags": "wrong_email/account"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Audio/Video Sync",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Audio/Video Sync",
+    "detail": "",
+    "description": "Issues related to sync between audio/video during recording, editing or production.",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Audio/Video Sync when Issues related to sync between audio/video during recording, editing or production.",
+    "tags": "audio_video_sync"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Crash",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Crash",
+    "detail": "",
+    "description": "Issues related to Camtasia crashing, including the Recorder. Use when the crash message appears for the end user.",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Crash when Issues related to Camtasia crashing, including the Recorder. Use when the crash message appears for the end user.",
+    "tags": "cmac_crash"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Customer Care",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Customer Care",
+    "detail": "",
+    "description": "Issues related to customer service, sales, keys, invoices, downloads etc.",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Customer Care when Issues related to customer service, sales, keys, invoices, downloads etc.",
+    "tags": "customer_solutions"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: External Footage",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "External Footage",
+    "detail": "",
+    "description": "Issues related to videos from external sources not playing back correctly in the timeline/canvas.",
+    "whenToUse": "Use Camtasia Editor (Mac) :: External Footage when Issues related to videos from external sources not playing back correctly in the timeline/canvas.",
+    "tags": "external_footage"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Other",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Other",
+    "detail": "",
+    "description": "Customer question that is not a problem with the software or a directly training question",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Other when Customer question that is not a problem with the software or a directly training question",
+    "tags": "cmac_other"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Performance Issues",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Performance Issues",
+    "detail": "",
+    "description": "Any issues related canvas playback performance, timeline editing performance or rendering performance",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Performance Issues when Any issues related canvas playback performance, timeline editing performance or rendering performance",
+    "tags": "choppy_preview"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Permissions",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Permissions",
+    "detail": "",
+    "description": "Issues related to permissions",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Permissions when Issues related to permissions",
+    "tags": "permissions"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Problem",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Problem",
+    "detail": "",
+    "description": "Issues related to the software not working as designed or presenting error messages not related to any of the other categories",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Problem when Issues related to the software not working as designed or presenting error messages not related to any of the other categories",
+    "tags": "cmac_problem"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Training",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Training",
+    "detail": "",
+    "description": "?Any sort of how to or best practice type question regarding Camtasia software only. If it’s not within the Camtasia software anywhere, then it’s not training.",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Training when ?Any sort of how to or best practice type question regarding Camtasia software only. If it’s not within the Camtasia software anywhere, then it’s not training.",
+    "tags": "cmac_training"
+  },
+  {
+    "title": "Camtasia Editor (Mac) :: Unable to start",
+    "category": "Camtasia Editor (Mac)",
+    "subcategory": "Unable to start",
+    "detail": "",
+    "description": "Unable to start message pops up when user attempts to launch Camtasia.",
+    "whenToUse": "Use Camtasia Editor (Mac) :: Unable to start when Unable to start message pops up when user attempts to launch Camtasia.",
+    "tags": "unable_to_start"
+  },
+  {
+    "title": "Cancel Renewal",
+    "category": "Cancel Renewal",
+    "subcategory": "",
+    "detail": "",
+    "description": "Wants to cancel their subscription(s). Helping customer cancel. Not refunding.",
+    "whenToUse": "Use Cancel Renewal when Wants to cancel their subscription(s). Helping customer cancel. Not refunding.",
+    "tags": "cancel_renewal"
+  },
+  {
+    "title": "CC to TS",
+    "category": "CC to TS",
+    "subcategory": "",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": "route_to_hq_support"
+  },
+  {
+    "title": "Close Sales Chat",
+    "category": "Close Sales Chat",
+    "subcategory": "",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": ""
+  },
+  {
+    "title": "Corp Lookup :: Chat",
+    "category": "Corp Lookup",
+    "subcategory": "Chat",
+    "detail": "",
+    "description": "Add anytime Corp is used during a chat ticket. This is a secondary macro not a primary.",
+    "whenToUse": "Use Corp Lookup :: Chat when Add anytime Corp is used during a chat ticket. This is a secondary macro not a primary.",
+    "tags": "corp_lookup"
+  },
+  {
+    "title": "Corp Lookup :: Ticket",
+    "category": "Corp Lookup",
+    "subcategory": "Ticket",
+    "detail": "",
+    "description": "Add tag for when you use Corp on a ticket.",
+    "whenToUse": "Use Corp Lookup :: Ticket when Add tag for when you use Corp on a ticket.",
+    "tags": "corp_lookup"
+  },
+  {
+    "title": "CSM/AM Passive Missing Fields",
+    "category": "CSM/AM Passive Missing Fields",
+    "subcategory": "",
+    "detail": "",
+    "description": "Please fill out the information needed",
+    "whenToUse": "Use CSM/AM Passive Missing Fields when Please fill out the information needed",
+    "tags": ""
+  },
+  {
+    "title": "Diag Request::Snagit + DirectX",
+    "category": "Diag Request",
+    "subcategory": "Snagit + DirectX",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": ""
+  },
+  {
+    "title": "dxdiag",
+    "category": "dxdiag",
+    "subcategory": "",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": ""
+  },
+  {
+    "title": "End Live Messaging Conversation",
+    "category": "End Live Messaging Conversation",
+    "subcategory": "",
+    "detail": "",
+    "description": "Use this macro when the issue is solved, is being escalated, or are converting to email for follow up.",
+    "whenToUse": "Use End Live Messaging Conversation only when the live messaging issue is resolved, has been escalated, or is being converted to email for follow-up; do not use this macro solely because the agent has responded or marked the ticket as solved.",
+    "tags": "end_messaging_convo"
+  },
+  {
+    "title": "Escalate :: Escalate to (Snagit Mac)",
+    "category": "Escalate",
+    "subcategory": "Escalate to (Snagit Mac)",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": "transfer escalate_to_snagit_mac"
+  },
+  {
+    "title": "Escalate :: Escalate to Alyssa (Screencast)",
+    "category": "Escalate",
+    "subcategory": "Escalate to Alyssa (Screencast)",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": "transfer escalate_to_melissa"
+  },
+  {
+    "title": "Escalate :: Escalate to Alyssa and Alex C(Camtasia Win/Mac)",
+    "category": "Escalate",
+    "subcategory": "Escalate to Alyssa and Alex C(Camtasia Win/Mac)",
+    "detail": "",
+    "description": "Alyssa and Alex C are handling Camtasia Windows and Mac escalations.",
+    "whenToUse": "Use Escalate :: Escalate to Alyssa and Alex C(Camtasia Win/Mac) when Alyssa and Alex C are handling Camtasia Windows and Mac escalations.",
+    "tags": "camtasia_escalation transfer"
+  },
+  {
+    "title": "Escalate :: Escalate to Bug",
+    "category": "Escalate",
+    "subcategory": "Escalate to Bug",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": "transfer escalate_to_bug"
+  },
+  {
+    "title": "Escalate :: Escalate to Dan (Audiate)",
+    "category": "Escalate",
+    "subcategory": "Escalate to Dan (Audiate)",
+    "detail": "",
+    "description": "Dan and Alex C will be doing a rotation when it comes to Audiate.  If you have an Audiate question or problem use this macro to send it to Dan or Alex C.",
+    "whenToUse": "Use Escalate :: Escalate to Dan (Audiate) when Dan and Alex C will be doing a rotation when it comes to Audiate. If you have an Audiate question or problem use this macro to send it to Dan or Alex C.",
+    "tags": "escalate_to_dan transfer"
+  },
+  {
+    "title": "Escalate :: Escalate to Jason/Anthony (Snagit Win)",
+    "category": "Escalate",
+    "subcategory": "Escalate to Jason/Anthony (Snagit Win)",
+    "detail": "",
+    "description": "Escalate to Product leads for Snagit Windows",
+    "whenToUse": "Use Escalate :: Escalate to Jason/Anthony (Snagit Win) when Escalate to Product leads for Snagit Windows",
+    "tags": "escalate_to_jason transfer"
+  },
+  {
+    "title": "Escalate :: Escalate to Passive",
+    "category": "Escalate",
+    "subcategory": "Escalate to Passive",
+    "detail": "",
+    "description": "A customer is looking for a passive offline build of our software and we need to get this ticket in the hands of an agent who can process that.",
+    "whenToUse": "Use Escalate :: Escalate to Passive when A customer is looking for a passive offline build of our software and we need to get this ticket in the hands of an agent who can process that.",
+    "tags": "transfer escalate_to_passive"
+  },
+  {
+    "title": "Escalate to Customer Service Tier 2",
+    "category": "Escalate to Customer Service Tier 2",
+    "subcategory": "",
+    "detail": "",
+    "description": "Send ticket to tier 2 customer service",
+    "whenToUse": "Use Escalate to Customer Service Tier 2 when Send ticket to tier 2 customer service",
+    "tags": "cc_escalate_to_cust_care_t2 transfer"
+  },
+  {
+    "title": "Escalate to Technical Support",
+    "category": "Escalate to Technical Support",
+    "subcategory": "",
+    "detail": "",
+    "description": "Send ticket to tier 2 technical support",
+    "whenToUse": "Use Escalate to Technical Support when Send ticket to tier 2 technical support",
+    "tags": "cc_escalate_to_technical_support transfer"
+  },
+  {
+    "title": "FastSpring :: Address Update",
+    "category": "FastSpring",
+    "subcategory": "Address Update",
+    "detail": "",
+    "description": "Customer requests a billing address update.",
+    "whenToUse": "Use FastSpring :: Address Update when Customer requests a billing address update.",
+    "tags": "address_update"
+  },
+  {
+    "title": "FastSpring :: Custom Link",
+    "category": "FastSpring",
+    "subcategory": "Custom Link",
+    "detail": "",
+    "description": "Customer needs a custom link to purchase. Tier 2 providing custom link.",
+    "whenToUse": "Use FastSpring :: Custom Link when Customer needs a custom link to purchase. Tier 2 providing custom link.",
+    "tags": "custom_link"
+  },
+  {
+    "title": "FastSpring :: Escalate to FastSpring",
+    "category": "FastSpring",
+    "subcategory": "Escalate to FastSpring",
+    "detail": "",
+    "description": "Any time you have to reach out to FastSpring support to get an answer and a different category does not apply (that may explain the topic better).",
+    "whenToUse": "Use FastSpring :: Escalate to FastSpring when Any time you have to reach out to FastSpring support to get an answer and a different category does not apply (that may explain the topic better).",
+    "tags": "escalate_to_fastspring"
+  },
+  {
+    "title": "FastSpring :: Online Store Issues",
+    "category": "FastSpring",
+    "subcategory": "Online Store Issues",
+    "detail": "",
+    "description": "Any FastSpring related store/cart issues. During check-out, feedback, etc.",
+    "whenToUse": "Use FastSpring :: Online Store Issues when Any FastSpring related store/cart issues. During check-out, feedback, etc.",
+    "tags": "online_store_issues"
+  },
+  {
+    "title": "FastSpring :: Update Billing",
+    "category": "FastSpring",
+    "subcategory": "Update Billing",
+    "detail": "",
+    "description": "Customer wants to update their billing information or needs to due to expired payment info.",
+    "whenToUse": "Use FastSpring :: Update Billing when Customer wants to update their billing information or needs to due to expired payment info.",
+    "tags": "update_billing"
+  },
+  {
+    "title": "Fill out CSM/AM",
+    "category": "Fill out CSM/AM",
+    "subcategory": "",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": ""
+  },
+  {
+    "title": "FTP upload",
+    "category": "FTP upload",
+    "subcategory": "",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": ""
+  },
+  {
+    "title": "GDPR",
+    "category": "GDPR",
+    "subcategory": "",
+    "detail": "",
+    "description": "Customer has a question or is making a GDPR type of request.",
+    "whenToUse": "Use GDPR when Customer has a question or is making a GDPR type of request.",
+    "tags": "cs_gdpr"
+  },
+  {
+    "title": "General Sales",
+    "category": "General Sales",
+    "subcategory": "",
+    "detail": "",
+    "description": "The customer has sales questions that we can answer (not transferring).",
+    "whenToUse": "Use General Sales when The customer has sales questions that we can answer (not transferring).",
+    "tags": "general_sales"
+  },
+  {
+    "title": "Junk",
+    "category": "Junk",
+    "subcategory": "",
+    "detail": "",
+    "description": "Spam. Not a real person or support request. Auto-replies.",
+    "whenToUse": "Use Junk when Spam. Not a real person or support request. Auto-replies.",
+    "tags": "do_not_notify do_not_reply junk"
+  },
+  {
+    "title": "Key :: App Store",
+    "category": "Key",
+    "subcategory": "App Store",
+    "detail": "",
+    "description": "",
+    "whenToUse": "",
+    "tags": "app_store"
+  },
+  {
+    "title": "Key :: Counterfeit Key",
+    "category": "Key",
+    "subcategory": "Counterfeit Key",
+    "detail": "",
+    "description": "Keys recognized as counterfeit, or sending counterfeit phrase.",
+    "whenToUse": "Use Key :: Counterfeit Key when Keys recognized as counterfeit, or sending counterfeit phrase.",
+    "tags": "counterfeit_key"
+  },
+  {
+    "title": "Key :: Need Key to Reinstall",
+    "category": "Key",
+    "subcategory": "Need Key to Reinstall",
+    "detail": "",
+    "description": "Customer needs help finding or to be resent their software key to re-install.",
+    "whenToUse": "Use Key :: Need Key to Reinstall when Customer needs help finding or to be resent their software key to re-install.",
+    "tags": "need_key_to_reinstall"
+  },
+  {
+    "title": "Key :: Unlocking Issues",
+    "category": "Key",
+    "subcategory": "Unlocking Issues",
+    "detail": "",
+    "description": "Customer is facing issues trying to unlock their software.",
+    "whenToUse": "Use Key :: Unlocking Issues when Customer is facing issues trying to unlock their software.",
+    "tags": "unlocking_issues"
+  },
+  {
+    "title": "Licensing :: Activate on 2 Machines",
+    "category": "Licensing",
+    "subcategory": "Activate on 2 Machines",
+    "detail": "",
+    "description": "Questions about activating software on multiple machines. Policy, how-to, etc.",
+    "whenToUse": "Use Licensing :: Activate on 2 Machines when Questions about activating software on multiple machines. Policy, how-to, etc.",
+    "tags": "install_on_2_machines"
+  },
+  {
+    "title": "Licensing :: Clear Activations",
+    "category": "Licensing",
+    "subcategory": "Clear Activations",
+    "detail": "",
+    "description": "Clearing activations for Snagit or Camtasia. How-to, agent clearing for the customer, etc.",
+    "whenToUse": "Use Licensing :: Clear Activations when Clearing activations for Snagit or Camtasia. How-to, agent clearing for the customer, etc.",
+    "tags": "clear_activations"
+  },
+  {
+    "title": "Licensing :: Do Not Monitor Installations",
+    "category": "Licensing",
+    "subcategory": "Do Not Monitor Installations",
+    "detail": "",
+    "description": "Customer is asking how to view who is using the software, how to view activations or installations, and how to manage (add or remove) users from a license.",
+    "whenToUse": "Use Licensing :: Do Not Monitor Installations when Customer is asking how to view who is using the software, how to view activations or installations, and how to manage (add or remove) users from a license.",
+    "tags": "do_not_monitor_installations"
+  },
+  {
+    "title": "Licensing :: Perpetual Licensing",
+    "category": "Licensing",
+    "subcategory": "Perpetual Licensing",
+    "detail": "",
+    "description": "Inquiries about purchasing perpetual, how perpetual licensing works, etc.",
+    "whenToUse": "Use Licensing :: Perpetual Licensing when Inquiries about purchasing perpetual, how perpetual licensing works, etc.",
+    "tags": "perpetual_licensing"
+  },
+  {
+    "title": "Licensing :: Transfer/Migrate License",
+    "category": "Licensing",
+    "subcategory": "Transfer/Migrate License",
+    "detail": "",
+    "description": "Questions on transferring license or software to a new/different user.",
+    "whenToUse": "Use Licensing :: Transfer/Migrate License when Questions on transferring license or software to a new/different user.",
+    "tags": "transfer_migrate_license"
+  },
+  {
+    "title": "Maintenance :: Certification",
+    "category": "Maintenance",
+    "subcategory": "Certification",
+    "detail": "",
+    "description": "Any certification related questions.",
+    "whenToUse": "Use Maintenance :: Certification when Any certification related questions.",
+    "tags": "certification"
+  },
+  {
+    "title": "Maintenance :: General Maintenance",
+    "category": "Maintenance",
+    "subcategory": "General Maintenance",
+    "detail": "",
+    "description": "Any general questions regarding M agreements that do not fit a specific category.",
+    "whenToUse": "Use Maintenance :: General Maintenance when Any general questions regarding M agreements that do not fit a specific category.",
+    "tags": "general_maintenance"
+  },
+  {
+    "title": "Maintenance :: Need Key Maintenance",
+    "category": "Maintenance",
+    "subcategory": "Need Key Maintenance",
+    "detail": "",
+    "description": "Needs a key from an M agreement, or S subscription. Typically Legacy M agreements.",
+    "whenToUse": "Use Maintenance :: Need Key Maintenance when Needs a key from an M agreement, or S subscription. Typically Legacy M agreements.",
+    "tags": "need_key_maintenance"
+  },
+  {
+    "title": "Maintenance :: Transition to/from Traditional",
+    "category": "Maintenance",
+    "subcategory": "Transition to/from Traditional",
+    "detail": "",
+    "description": "Customer wants to move from S subscription to a traditional M agreement.",
+    "whenToUse": "Use Maintenance :: Transition to/from Traditional when Customer wants to move from S subscription to a traditional M agreement.",
+    "tags": "transition_to_traditional"
+  },
+  {
+    "title": "Maintenance :: Update Contact Traditional Maintenance",
+    "category": "Maintenance",
+    "subcategory": "Update Contact Traditional Maintenance",
+    "detail": "",
+    "description": "Updating name, email, or company on a traditional M agreement.",
+    "whenToUse": "Use Maintenance :: Update Contact Traditional Maintenance when Updating name, email, or company on a traditional M agreement.",
+    "tags": "update_contact_traditional_maintenance"
+  },
+  {
+    "title": "Need Download :: Current Version",
+    "category": "Need Download",
+    "subcategory": "Current Version",
+    "detail": "",
+    "description": "Needs (or we are sending) a download link to the current version of Camtasia/Snagit software.",
+    "whenToUse": "Use Need Download :: Current Version when Needs (or we are sending) a download link to the current version of Camtasia/Snagit software.",
+    "tags": "current_version"
+  },
+  {
+    "title": "Need Download :: Previous Version",
+    "category": "Need Download",
+    "subcategory": "Previous Version",
+    "detail": "",
+    "description": "Needs (or we are sending) a download link for a previous version of Camtasia/Snagit software.",
+    "whenToUse": "Use Need Download :: Previous Version when Needs (or we are sending) a download link for a previous version of Camtasia/Snagit software.",
+    "tags": "previous_version"
+  },
+  {
+    "title": "Need Invoice/Receipt",
+    "category": "Need Invoice/Receipt",
+    "subcategory": "",
+    "detail": "",
+    "description": "Customer is requesting a copy of their receipt or invoice. Needs help locating receipt.",
+    "whenToUse": "Use Need Invoice/Receipt when Customer is requesting a copy of their receipt or invoice. Needs help locating receipt.",
+    "tags": "need_invoice"
+  },
+  {
+    "title": "Other",
+    "category": "Other",
+    "subcategory": "",
+    "detail": "",
+    "description": "Catch all tag for topics that don't fit under a different tag.",
+    "whenToUse": "Use Other when Catch all tag for topics that don't fit under a different tag.",
+    "tags": "customer_service_other"
+  },
+  {
+    "title": "Plan.Brand Confusion",
+    "category": "Plan.Brand Confusion",
+    "subcategory": "",
+    "detail": "",
+    "description": "Confusion over what their current plan includes, Camtasia Starter being watermarked, or confusion due to product name changes. Not to be used for general sales questions.",
+    "whenToUse": "Use Plan.Brand Confusion when Confusion over what their current plan includes, Camtasia Starter being watermarked, or confusion due to product name changes. Not to be used for general sales questions.",
+    "tags": "plan/brand_confusion"
+  },
+  {
+    "title": "Promo",
+    "category": "Promo",
+    "subcategory": "",
+    "detail": "",
+    "description": "Customer has a question on a sale/promotion.",
+    "whenToUse": "Use Promo when Customer has a question on a sale/promotion.",
+    "tags": "promo"
+  },
+  {
+    "title": "Refund Request",
+    "category": "Refund Request",
+    "subcategory": "",
+    "detail": "",
+    "description": "Wanted a refund, or the agent is submitting a refund for the customer.",
+    "whenToUse": "Use Refund Request when Wanted a refund, or the agent is submitting a refund for the customer.",
+    "tags": "submitted_refund_request"
+  },
+  {
+    "title": "Screencast.com :: Content Recovery",
+    "category": "Screencast.com",
+    "subcategory": "Content Recovery",
+    "detail": "",
+    "description": "Used when videos are constantly buffering, or have a poor experience when viewing the content.",
+    "whenToUse": "Use Screencast.com :: Content Recovery when Used when videos are constantly buffering, or have a poor experience when viewing the content.",
+    "tags": "content_recovery"
+  },
+  {
+    "title": "Screencast.com :: Customer Care",
+    "category": "Screencast.com",
+    "subcategory": "Customer Care",
+    "detail": "",
+    "description": "Anything we would normally send to customer service or sales, old downloads, stuff like that",
+    "whenToUse": "Use Screencast.com :: Customer Care when Anything we would normally send to customer service or sales, old downloads, stuff like that",
+    "tags": "customer_solutions"
+  },
+  {
+    "title": "Screencast.com :: Deleting Accounts",
+    "category": "Screencast.com",
+    "subcategory": "Deleting Accounts",
+    "detail": "",
+    "description": "Any questions about deleting accounts",
+    "whenToUse": "Use Screencast.com :: Deleting Accounts when Any questions about deleting accounts",
+    "tags": "deleting_accounts"
+  },
+  {
+    "title": "Screencast.com :: Download SC Content",
+    "category": "Screencast.com",
+    "subcategory": "Download SC Content",
+    "detail": "",
+    "description": "Use this tag when a user wants to download more than 1 media at a time from screencast.com",
+    "whenToUse": "Use Screencast.com :: Download SC Content when Use this tag when a user wants to download more than 1 media at a time from screencast.com",
+    "tags": "download_sc_content"
+  },
+  {
+    "title": "Screencast.com :: Other",
+    "category": "Screencast.com",
+    "subcategory": "Other",
+    "detail": "",
+    "description": "Customer question that is not a problem with the software or a directly training question",
+    "whenToUse": "Use Screencast.com :: Other when Customer question that is not a problem with the software or a directly training question",
+    "tags": "screencast_other"
+  },
+  {
+    "title": "Screencast.com :: Outage",
+    "category": "Screencast.com",
+    "subcategory": "Outage",
+    "detail": "",
+    "description": "?Screencast.com is down in some way that prevents normal usage for everyone.",
+    "whenToUse": "Use Screencast.com :: Outage when ?Screencast.com is down in some way that prevents normal usage for everyone.",
+    "tags": "outage"
+  },
+  {
+    "title": "Screencast.com :: Playback Performance",
+    "category": "Screencast.com",
+    "subcategory": "Playback Performance",
+    "detail": "",
+    "description": "Used when videos are constantly buffering, or have a poor experience when viewing the content.",
+    "whenToUse": "Use Screencast.com :: Playback Performance when Used when videos are constantly buffering, or have a poor experience when viewing the content.",
+    "tags": "playback_performance"
+  },
+  {
+    "title": "Screencast.com :: Problem",
+    "category": "Screencast.com",
+    "subcategory": "Problem",
+    "detail": "",
+    "description": "Any other error message, or instance where the website is not working as expected.",
+    "whenToUse": "Use Screencast.com :: Problem when Any other error message, or instance where the website is not working as expected.",
+    "tags": "screencast_problem"
+  },
+  {
+    "title": "Screencast.com :: SC Feedback",
+    "category": "Screencast.com",
+    "subcategory": "SC Feedback",
+    "detail": "",
+    "description": "Any Feedback related to how it now looks ?or performs.",
+    "whenToUse": "Use Screencast.com :: SC Feedback when Any Feedback related to how it now looks ?or performs.",
+    "tags": "sc_feedback"
+  },
+  {
+    "title": "Screencast.com :: Training",
+    "category": "Screencast.com",
+    "subcategory": "Training",
+    "detail": "",
+    "description": "?Any sort of how to, or best practice type question regarding the software / service.",
+    "whenToUse": "Use Screencast.com :: Training when ?Any sort of how to, or best practice type question regarding the software / service.",
+    "tags": "screencast_training"
+  },
+  {
+    "title": "Screencast.com :: Uploading Downloading problems",
+    "category": "Screencast.com",
+    "subcategory": "Uploading Downloading problems",
+    "detail": "",
+    "description": "?Failed uploads and downloading of content for playback",
+    "whenToUse": "Use Screencast.com :: Uploading Downloading problems when ?Failed uploads and downloading of content for playback",
+    "tags": "uploading_downloading"
+  },
+  {
+    "title": "Sent to Sales",
+    "category": "Sent to Sales",
+    "subcategory": "",
+    "detail": "",
+    "description": "Customer sent to the Sales team for assistance. Typically an internal escalation (HQ sales). Use Assign ticket to > Sales for Premier.",
+    "whenToUse": "Use Sent to Sales when Customer sent to the Sales team for assistance. Typically an internal escalation (HQ sales). Use Assign ticket to > Sales for Premier.",
+    "tags": "sent_to_sales"
+  },
+  {
+    "title": "Snagit :: Activating Subscriptions :: -3 Error",
+    "category": "Snagit",
+    "subcategory": "Activating Subscriptions",
+    "detail": "-3 Error",
+    "description": "-3 Error when launching the program",
+    "whenToUse": "Use Snagit :: Activating Subscriptions :: -3 Error when -3 Error when launching the program",
+    "tags": "activation_errors -3_error"
+  },
+  {
+    "title": "Snagit :: Activating Subscriptions :: Error Activating with Software Key",
+    "category": "Snagit",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Error Activating with Software Key",
+    "description": "Any time there is an issue activating with the software key.",
+    "whenToUse": "Use Snagit :: Activating Subscriptions :: Error Activating with Software Key when Any time there is an issue activating with the software key.",
+    "tags": "error_activating_with_software_key"
+  },
+  {
+    "title": "Snagit :: Activating Subscriptions :: Exceed Activations",
+    "category": "Snagit",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Exceed Activations",
+    "description": "Customer gets message stating they are out of activations",
+    "whenToUse": "Use Snagit :: Activating Subscriptions :: Exceed Activations when Customer gets message stating they are out of activations",
+    "tags": "exceed_activations"
+  },
+  {
+    "title": "Snagit :: Activating Subscriptions :: No License Found",
+    "category": "Snagit",
+    "subcategory": "Activating Subscriptions",
+    "detail": "No License Found",
+    "description": "When signing into the software, customer gets message \"No License Found\"",
+    "whenToUse": "Use Snagit :: Activating Subscriptions :: No License Found when When signing into the software, customer gets message \"No License Found\"",
+    "tags": "no_license_found"
+  },
+  {
+    "title": "Snagit :: Activating Subscriptions :: Trial/Need Key Instead of Subscription",
+    "category": "Snagit",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Trial/Need Key Instead of Subscription",
+    "description": "When customer is on an individual subscription but are saying they are in trial mode.",
+    "whenToUse": "Use Snagit :: Activating Subscriptions :: Trial/Need Key Instead of Subscription when When customer is on an individual subscription but are saying they are in trial mode.",
+    "tags": "trial/need_key_instead_of_subscription"
+  },
+  {
+    "title": "Snagit :: Activating Subscriptions :: Unable to Sign-in",
+    "category": "Snagit",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Unable to Sign-in",
+    "description": "Customer gets an error about not being able to connect to the activation server. E.g; unable to verify license, no network.",
+    "whenToUse": "Use Snagit :: Activating Subscriptions :: Unable to Sign-in when Customer gets an error about not being able to connect to the activation server. E.g; unable to verify license, no network.",
+    "tags": "unable_to_sign-in"
+  },
+  {
+    "title": "Snagit :: Activating Subscriptions :: Wrong Email/Account",
+    "category": "Snagit",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Wrong Email/Account",
+    "description": "Customer using incorrect email when trying to activate/use the software",
+    "whenToUse": "Use Snagit :: Activating Subscriptions :: Wrong Email/Account when Customer using incorrect email when trying to activate/use the software",
+    "tags": "wrong_email/account"
+  },
+  {
+    "title": "Snagit :: Crash",
+    "category": "Snagit",
+    "subcategory": "Crash",
+    "detail": "",
+    "description": "?Use this whenever Snagitcapture.exe or SnagitEditor.exe shows the crash error message.",
+    "whenToUse": "Use Snagit :: Crash when ?Use this whenever Snagitcapture.exe or SnagitEditor.exe shows the crash error message.",
+    "tags": "snagit_win_crash"
+  },
+  {
+    "title": "Snagit :: Customer Care",
+    "category": "Snagit",
+    "subcategory": "Customer Care",
+    "detail": "",
+    "description": "Anything we would normally send to customer service or sales, keys, old downloads, stuff like that",
+    "whenToUse": "Use Snagit :: Customer Care when Anything we would normally send to customer service or sales, keys, old downloads, stuff like that",
+    "tags": "customer_solutions"
+  },
+  {
+    "title": "Snagit :: Editor Not Opening",
+    "category": "Snagit",
+    "subcategory": "Editor Not Opening",
+    "detail": "",
+    "description": "Snagit Editor not opening after a capture or when manually trying to start it.",
+    "whenToUse": "Use Snagit :: Editor Not Opening when Snagit Editor not opening after a capture or when manually trying to start it.",
+    "tags": "editor_not_opening"
+  },
+  {
+    "title": "Snagit :: Enterprise",
+    "category": "Snagit",
+    "subcategory": "Enterprise",
+    "detail": "",
+    "description": "?Any ticket regarding deployment of Snaigt, and/or installing in a virtual environment (i.e Remote Desktop, Terminal Server, ect).",
+    "whenToUse": "Use Snagit :: Enterprise when ?Any ticket regarding deployment of Snaigt, and/or installing in a virtual environment (i.e Remote Desktop, Terminal Server, ect).",
+    "tags": "enterprise"
+  },
+  {
+    "title": "Snagit :: Install Errors",
+    "category": "Snagit",
+    "subcategory": "Install Errors",
+    "detail": "",
+    "description": "Any problems installing Snagit (separate from the TS Updater)",
+    "whenToUse": "Use Snagit :: Install Errors when Any problems installing Snagit (separate from the TS Updater)",
+    "tags": "install_errors"
+  },
+  {
+    "title": "Snagit :: Other",
+    "category": "Snagit",
+    "subcategory": "Other",
+    "detail": "",
+    "description": "Customer question that is not a problem with the software or a directly training question",
+    "whenToUse": "Use Snagit :: Other when Customer question that is not a problem with the software or a directly training question",
+    "tags": "snagit_other"
+  },
+  {
+    "title": "Snagit :: Passive",
+    "category": "Snagit",
+    "subcategory": "Passive",
+    "detail": "",
+    "description": "Customers we send Passive Activation solution to.",
+    "whenToUse": "Use Snagit :: Passive when Customers we send Passive Activation solution to.",
+    "tags": "yes_scalable_offline_activation"
+  },
+  {
+    "title": "Snagit :: Problem",
+    "category": "Snagit",
+    "subcategory": "Problem",
+    "detail": "",
+    "description": "Any other error message, or instance where the software is not working as designed.  Current version only.",
+    "whenToUse": "Use Snagit :: Problem when Any other error message, or instance where the software is not working as designed. Current version only.",
+    "tags": "snagit_problem"
+  },
+  {
+    "title": "Snagit :: Scrolling",
+    "category": "Snagit",
+    "subcategory": "Scrolling",
+    "detail": "",
+    "description": "Any problems with scrolling / auto scrolling capture.",
+    "whenToUse": "Use Snagit :: Scrolling when Any problems with scrolling / auto scrolling capture.",
+    "tags": "scrolling"
+  },
+  {
+    "title": "Snagit :: Training",
+    "category": "Snagit",
+    "subcategory": "Training",
+    "detail": "",
+    "description": "?Any sort of how to, or best practice type question regarding the software / service.",
+    "whenToUse": "Use Snagit :: Training when ?Any sort of how to, or best practice type question regarding the software / service.",
+    "tags": "snagit_training"
+  },
+  {
+    "title": "Snagit :: Unable to Capture",
+    "category": "Snagit",
+    "subcategory": "Unable to Capture",
+    "detail": "",
+    "description": "Unable to Capture Error with Snagit",
+    "whenToUse": "Use Snagit :: Unable to Capture when Unable to Capture Error with Snagit",
+    "tags": "unable_to_capture"
+  },
+  {
+    "title": "Snagit :: Video Editing Tools",
+    "category": "Snagit",
+    "subcategory": "Video Editing Tools",
+    "detail": "",
+    "description": "??Use this whenever there is a call/ticket wondering why the editing tools are not available for video's.",
+    "whenToUse": "Use Snagit :: Video Editing Tools when ??Use this whenever there is a call/ticket wondering why the editing tools are not available for video's.",
+    "tags": "video_editing_tools"
+  },
+  {
+    "title": "Snagit :: Video/Audio Problem :: Allowdxgi",
+    "category": "Snagit",
+    "subcategory": "Video/Audio Problem",
+    "detail": "Allowdxgi",
+    "description": "Any problem related to video recordings where you adjust the setting for allowdxgi",
+    "whenToUse": "Use Snagit :: Video/Audio Problem :: Allowdxgi when Any problem related to video recordings where you adjust the setting for allowdxgi",
+    "tags": "allowdxgi"
+  },
+  {
+    "title": "Snagit :: Video/Audio Problem :: Video/Audio Problem",
+    "category": "Snagit",
+    "subcategory": "Video/Audio Problem",
+    "detail": "Video/Audio Problem",
+    "description": "Any problem related to video recordings.   This includes problems recording audio.",
+    "whenToUse": "Use Snagit :: Video/Audio Problem :: Video/Audio Problem when Any problem related to video recordings. This includes problems recording audio.",
+    "tags": "non_web_cam_video_performance"
+  },
+  {
+    "title": "Snagit on Mac :: -3 Error",
+    "category": "Snagit on Mac",
+    "subcategory": "-3 Error",
+    "detail": "",
+    "description": "-3 error on startup",
+    "whenToUse": "Use Snagit on Mac :: -3 Error when -3 error on startup",
+    "tags": "-3_error"
+  },
+  {
+    "title": "Snagit on Mac :: Activating Subscriptions :: Error Activating with Software Key",
+    "category": "Snagit on Mac",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Error Activating with Software Key",
+    "description": "Any error while activating with a software key, not an email.",
+    "whenToUse": "Use Snagit on Mac :: Activating Subscriptions :: Error Activating with Software Key when Any error while activating with a software key, not an email.",
+    "tags": "error_activating_with_software_key"
+  },
+  {
+    "title": "Snagit on Mac :: Activating Subscriptions :: Exceed Activations",
+    "category": "Snagit on Mac",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Exceed Activations",
+    "description": "Customer gets message stating they are out of activations",
+    "whenToUse": "Use Snagit on Mac :: Activating Subscriptions :: Exceed Activations when Customer gets message stating they are out of activations",
+    "tags": "exceed_activations"
+  },
+  {
+    "title": "Snagit on Mac :: Activating Subscriptions :: No License Found",
+    "category": "Snagit on Mac",
+    "subcategory": "Activating Subscriptions",
+    "detail": "No License Found",
+    "description": "When signing into the software, customer gets message \"No License Found\"",
+    "whenToUse": "Use Snagit on Mac :: Activating Subscriptions :: No License Found when When signing into the software, customer gets message \"No License Found\"",
+    "tags": "no_license_found"
+  },
+  {
+    "title": "Snagit on Mac :: Activating Subscriptions :: Trial/Need Key Instead of Subscription",
+    "category": "Snagit on Mac",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Trial/Need Key Instead of Subscription",
+    "description": "When customer is on an individual subscription but are saying they are in trial mode or need license key.",
+    "whenToUse": "Use Snagit on Mac :: Activating Subscriptions :: Trial/Need Key Instead of Subscription when When customer is on an individual subscription but are saying they are in trial mode or need license key.",
+    "tags": "trial/need_key_instead_of_subscription"
+  },
+  {
+    "title": "Snagit on Mac :: Activating Subscriptions :: Unable to Sign-in",
+    "category": "Snagit on Mac",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Unable to Sign-in",
+    "description": "Customer gets an error about not being able to connect to the activation server",
+    "whenToUse": "Use Snagit on Mac :: Activating Subscriptions :: Unable to Sign-in when Customer gets an error about not being able to connect to the activation server",
+    "tags": "unable_to_sign-in"
+  },
+  {
+    "title": "Snagit on Mac :: Activating Subscriptions :: Wrong Email/Account",
+    "category": "Snagit on Mac",
+    "subcategory": "Activating Subscriptions",
+    "detail": "Wrong Email/Account",
+    "description": "Customer using incorrect email when trying to activate/use the software",
+    "whenToUse": "Use Snagit on Mac :: Activating Subscriptions :: Wrong Email/Account when Customer using incorrect email when trying to activate/use the software",
+    "tags": "wrong_email/account"
+  },
+  {
+    "title": "Snagit on Mac :: AppStore Version",
+    "category": "Snagit on Mac",
+    "subcategory": "AppStore Version",
+    "detail": "",
+    "description": "Any issue related to the Appstore version of Snagit.",
+    "whenToUse": "Use Snagit on Mac :: AppStore Version when Any issue related to the Appstore version of Snagit.",
+    "tags": "appstore_issues"
+  },
+  {
+    "title": "Snagit on Mac :: Crash",
+    "category": "Snagit on Mac",
+    "subcategory": "Crash",
+    "detail": "",
+    "description": "?Any crash that pops up the crash error message.",
+    "whenToUse": "Use Snagit on Mac :: Crash when ?Any crash that pops up the crash error message.",
+    "tags": "crash"
+  },
+  {
+    "title": "Snagit on Mac :: Customer Care",
+    "category": "Snagit on Mac",
+    "subcategory": "Customer Care",
+    "detail": "",
+    "description": "Anything we would normally send to customer service or sales, keys, old downloads, stuff like that",
+    "whenToUse": "Use Snagit on Mac :: Customer Care when Anything we would normally send to customer service or sales, keys, old downloads, stuff like that",
+    "tags": "customer_solutions"
+  },
+  {
+    "title": "Snagit on Mac :: Enterprise",
+    "category": "Snagit on Mac",
+    "subcategory": "Enterprise",
+    "detail": "",
+    "description": "?Any ticket regarding deployment of Snaigt, and/or installing in a virtual environment (i.e Remote Desktop, Terminal Server, ect).",
+    "whenToUse": "Use Snagit on Mac :: Enterprise when ?Any ticket regarding deployment of Snaigt, and/or installing in a virtual environment (i.e Remote Desktop, Terminal Server, ect).",
+    "tags": "enterprise"
+  },
+  {
+    "title": "Snagit on Mac :: Other",
+    "category": "Snagit on Mac",
+    "subcategory": "Other",
+    "detail": "",
+    "description": "Customer question that is not a problem with the software or a directly training question",
+    "whenToUse": "Use Snagit on Mac :: Other when Customer question that is not a problem with the software or a directly training question",
+    "tags": "snagit_on_mac_other"
+  },
+  {
+    "title": "Snagit on Mac :: Permissions",
+    "category": "Snagit on Mac",
+    "subcategory": "Permissions",
+    "detail": "",
+    "description": "Any time an error message pops up mentioning permissions.",
+    "whenToUse": "Use Snagit on Mac :: Permissions when Any time an error message pops up mentioning permissions.",
+    "tags": "permissions"
+  },
+  {
+    "title": "Snagit on Mac :: PiP",
+    "category": "Snagit on Mac",
+    "subcategory": "PiP",
+    "detail": "",
+    "description": "Any problems with PiP. This includes changing shape, dragging webcam window etc.",
+    "whenToUse": "Use Snagit on Mac :: PiP when Any problems with PiP. This includes changing shape, dragging webcam window etc.",
+    "tags": "pip"
+  },
+  {
+    "title": "Snagit on Mac :: Printing/PDF",
+    "category": "Snagit on Mac",
+    "subcategory": "Printing/PDF",
+    "detail": "",
+    "description": "?Any feedback or problems when trying to print and/or save to PDF",
+    "whenToUse": "Use Snagit on Mac :: Printing/PDF when ?Any feedback or problems when trying to print and/or save to PDF",
+    "tags": "printing_pdf"
+  },
+  {
+    "title": "Snagit on Mac :: Problem",
+    "category": "Snagit on Mac",
+    "subcategory": "Problem",
+    "detail": "",
+    "description": "Any other error message, or instance where the software is not working as designed.  Current version only.",
+    "whenToUse": "Use Snagit on Mac :: Problem when Any other error message, or instance where the software is not working as designed. Current version only.",
+    "tags": "snagit_mac_problem"
+  },
+  {
+    "title": "Snagit on Mac :: Scroll",
+    "category": "Snagit on Mac",
+    "subcategory": "Scroll",
+    "detail": "",
+    "description": "?Any problems with scrolling/auto scroll capture.",
+    "whenToUse": "Use Snagit on Mac :: Scroll when ?Any problems with scrolling/auto scroll capture.",
+    "tags": "mac_scroll"
+  },
+  {
+    "title": "Snagit on Mac :: Slow Performance",
+    "category": "Snagit on Mac",
+    "subcategory": "Slow Performance",
+    "detail": "",
+    "description": "?Slow start up, sluggish cross hairs, ect.",
+    "whenToUse": "Use Snagit on Mac :: Slow Performance when ?Slow start up, sluggish cross hairs, ect.",
+    "tags": "slow_performance"
+  },
+  {
+    "title": "Snagit on Mac :: Training",
+    "category": "Snagit on Mac",
+    "subcategory": "Training",
+    "detail": "",
+    "description": "?Any sort of how to, or best practice type question regarding the software / service.",
+    "whenToUse": "Use Snagit on Mac :: Training when ?Any sort of how to, or best practice type question regarding the software / service.",
+    "tags": "snagi_mac_training"
+  },
+  {
+    "title": "Snagit on Mac :: Video/Audio Problem",
+    "category": "Snagit on Mac",
+    "subcategory": "Video/Audio Problem",
+    "detail": "",
+    "description": "Any problems with video or audio capture with Snagit on Mac.",
+    "whenToUse": "Use Snagit on Mac :: Video/Audio Problem when Any problems with video or audio capture with Snagit on Mac.",
+    "tags": "video_issues"
+  },
+  {
+    "title": "Snagit/Camtasia Upgrade",
+    "category": "Snagit/Camtasia Upgrade",
+    "subcategory": "",
+    "detail": "",
+    "description": "Inquiries about purchasing an upgrade for Snagit/Camtasia.",
+    "whenToUse": "Use Snagit/Camtasia Upgrade when Inquiries about purchasing an upgrade for Snagit/Camtasia.",
+    "tags": "upgrade_snagit/camtasia upgrade"
+  },
+  {
+    "title": "Subscription :: 90 Day Key Shutoff",
+    "category": "Subscription",
+    "subcategory": "90 Day Key Shutoff",
+    "detail": "",
+    "description": "Customers reaching out about being deactivated from the software for surpassing the 90-day grace period without payment.",
+    "whenToUse": "Use Subscription :: 90 Day Key Shutoff when Customers reaching out about being deactivated from the software for surpassing the 90-day grace period without payment.",
+    "tags": "90_day_key_shutoff"
+  },
+  {
+    "title": "Subscription :: Activation Issue",
+    "category": "Subscription",
+    "subcategory": "Activation Issue",
+    "detail": "",
+    "description": "Issues with activating the software when already signed in correctly. Firewalls, VPNs, admin issues, etc.",
+    "whenToUse": "Use Subscription :: Activation Issue when Issues with activating the software when already signed in correctly. Firewalls, VPNs, admin issues, etc.",
+    "tags": "activation_issue"
+  },
+  {
+    "title": "Subscription :: Plans",
+    "category": "Subscription",
+    "subcategory": "Plans",
+    "detail": "",
+    "description": "General Camtasia Plan related questions.",
+    "whenToUse": "Use Subscription :: Plans when General Camtasia Plan related questions.",
+    "tags": "plans"
+  },
+  {
+    "title": "Subscription :: Software Sign In",
+    "category": "Subscription",
+    "subcategory": "Software Sign In",
+    "detail": "",
+    "description": "Needs to sign into their software to activate (Individual/Plans).",
+    "whenToUse": "Use Subscription :: Software Sign In when Needs to sign into their software to activate (Individual/Plans).",
+    "tags": "software_sign_in"
+  },
+  {
+    "title": "Subscription :: Subscription Dissatisfaction",
+    "category": "Subscription",
+    "subcategory": "Subscription Dissatisfaction",
+    "detail": "",
+    "description": "Customer does not like subscriptions. Canceling due to TechSmith being subscription-based software.",
+    "whenToUse": "Use Subscription :: Subscription Dissatisfaction when Customer does not like subscriptions. Canceling due to TechSmith being subscription-based software.",
+    "tags": "subscription_dissatisfaction"
+  },
+  {
+    "title": "Subscription :: Subscription General",
+    "category": "Subscription",
+    "subcategory": "Subscription General",
+    "detail": "",
+    "description": "Anything related to Subscriptions (Expirations, Software ID, etc) that does not fit a better category.",
+    "whenToUse": "Use Subscription :: Subscription General when Anything related to Subscriptions (Expirations, Software ID, etc) that does not fit a better category.",
+    "tags": "subscription_general"
+  },
+  {
+    "title": "Subscription General",
+    "category": "Subscription General",
+    "subcategory": "",
+    "detail": "",
+    "description": "To be used when there is a subscription licensing issue. This is a secondary macro, not a primary.",
+    "whenToUse": "Use Subscription General when To be used when there is a subscription licensing issue. This is a secondary macro, not a primary.",
+    "tags": "subscription_general"
+  },
+  {
+    "title": "Technical Issue",
+    "category": "Technical Issue",
+    "subcategory": "",
+    "detail": "",
+    "description": "Customer has technical issue that we can assist with (not transferring).",
+    "whenToUse": "Use Technical Issue when Customer has technical issue that we can assist with (not transferring).",
+    "tags": "technical_issue"
+  },
+  {
+    "title": "Trial General",
+    "category": "Trial General",
+    "subcategory": "",
+    "detail": "",
+    "description": "Anything related to trialing our software (resets, duration questions, etc).",
+    "whenToUse": "Use Trial General when Anything related to trialing our software (resets, duration questions, etc).",
+    "tags": "trial_general"
+  },
+  {
+    "title": "TSC Identity :: Delete Account",
+    "category": "TSC Identity",
+    "subcategory": "Delete Account",
+    "detail": "",
+    "description": "Requests or inquiries for TechSmith account deletion.",
+    "whenToUse": "Use TSC Identity :: Delete Account when Requests or inquiries for TechSmith account deletion.",
+    "tags": "cs_delete_account"
+  },
+  {
+    "title": "TSC Identity :: General Identity",
+    "category": "TSC Identity",
+    "subcategory": "General Identity",
+    "detail": "",
+    "description": "General questions or inquiries about a TechSmith account that doesn't not fit under a more specific category/tag.",
+    "whenToUse": "Use TSC Identity :: General Identity when General questions or inquiries about a TechSmith account that doesn't not fit under a more specific category/tag.",
+    "tags": "identity_general"
+  },
+  {
+    "title": "TSC Identity :: LTC Error",
+    "category": "TSC Identity",
+    "subcategory": "LTC Error",
+    "detail": "",
+    "description": "Any of the number of errors you can get in LTC that require fixing. If customer inquiry doesn't have a more specific category/tag.",
+    "whenToUse": "Use TSC Identity :: LTC Error when Any of the number of errors you can get in LTC that require fixing. If customer inquiry doesn't have a more specific category/tag.",
+    "tags": "ltc_error ltc identity_general"
+  },
+  {
+    "title": "TSC Identity :: Merge or Transfer Request TSCID",
+    "category": "TSC Identity",
+    "subcategory": "Merge or Transfer Request TSCID",
+    "detail": "",
+    "description": "Customer is requesting TechSmith accounts to be merged. Or doesn't need two accounts and needs help consolidating with CC tier 2.",
+    "whenToUse": "Use TSC Identity :: Merge or Transfer Request TSCID when Customer is requesting TechSmith accounts to be merged. Or doesn't need two accounts and needs help consolidating with CC tier 2.",
+    "tags": "merge_or_transfer_request_tscid"
+  },
+  {
+    "title": "TSC Identity :: Password Reset TSCID",
+    "category": "TSC Identity",
+    "subcategory": "Password Reset TSCID",
+    "detail": "",
+    "description": "Password resets, issues with password reset, etc.",
+    "whenToUse": "Use TSC Identity :: Password Reset TSCID when Password resets, issues with password reset, etc.",
+    "tags": "password_reset_tscid"
+  },
+  {
+    "title": "TSC Identity :: Update Email Address",
+    "category": "TSC Identity",
+    "subcategory": "Update Email Address",
+    "detail": "",
+    "description": "Customer wants to update their primary or recovery email address for their TechSmith account.",
+    "whenToUse": "Use TSC Identity :: Update Email Address when Customer wants to update their primary or recovery email address for their TechSmith account.",
+    "tags": "update_email_address_tscid"
+  },
+  {
+    "title": "Unable to Connect to Activation Server Error",
+    "category": "Unable to Connect to Activation Server Error",
+    "subcategory": "",
+    "detail": "",
+    "description": "Issues related to activating the software due to host file, firewall or something else.",
+    "whenToUse": "Use Unable to Connect to Activation Server Error when Issues related to activating the software due to host file, firewall or something else.",
+    "tags": "unable_to_connect_to_activation_server_error"
+  }
+]

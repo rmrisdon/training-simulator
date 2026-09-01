@@ -4,25 +4,48 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+        sans: ['Nunito Sans', 'IBM Plex Sans', 'system-ui', 'sans-serif'],
         mono: ['IBM Plex Mono', 'ui-monospace', 'monospace'],
       },
       colors: {
         ink: {
-          950: '#070b14',
-          900: '#0b1220',
-          800: '#10192c',
-          700: '#162238',
-          600: '#1c2c48',
+          950: '#0b1210',
+          900: '#121a16',
+          800: '#18241e',
+          700: '#20322a',
+          600: '#2a4036',
+        },
+        lime: {
+          DEFAULT: '#8dc63f',
+          bright: '#c5e86c',
+          dim: '#5f8a28',
+        },
+        snagit: {
+          DEFAULT: '#f15a24',
+          soft: '#ff8a5b',
+        },
+        camtasia: {
+          DEFAULT: '#1aa39a',
+          soft: '#5ed0c8',
+        },
+        audiate: {
+          DEFAULT: '#8b6cff',
+          soft: '#b9a6ff',
+        },
+        screencast: {
+          DEFAULT: '#3b9bff',
+          soft: '#8cc4ff',
         },
         accent: {
-          DEFAULT: '#2dd4bf',
-          dim: '#0f766e',
-          glow: 'rgba(45, 212, 191, 0.18)',
+          DEFAULT: '#8dc63f',
+          dim: '#5f8a28',
+          glow: 'rgba(141, 198, 63, 0.22)',
         },
       },
       boxShadow: {
-        panel: '0 0 0 1px rgba(148, 163, 184, 0.08), 0 18px 40px rgba(0, 0, 0, 0.35)',
+        card: '0 1px 2px rgba(16, 24, 40, 0.05), 0 1px 3px rgba(16, 24, 40, 0.08)',
+        'card-hover': '0 4px 12px rgba(16, 24, 40, 0.08)',
+        pop: '0 16px 40px rgba(16, 24, 40, 0.14)',
       },
     },
   },
