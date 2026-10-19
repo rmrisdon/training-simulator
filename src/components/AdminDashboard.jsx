@@ -124,11 +124,11 @@ function DetailDrawer({ evaluation, onClose }) {
             <h2 id="eval-drawer-title" className="mt-1 text-xl font-semibold text-slate-900">
               {evaluation.title}
             </h2>
-            <p className="mt-1 text-sm text-slate-500">
-              {evaluation.agentName}
-              {evaluation.product ? ` · ${evaluation.product}` : ''}
-              {evaluation.submittedAt ? ` · ${evaluation.submittedAt}` : ''}
-            </p>
+            {[evaluation.product, evaluation.submittedAt].filter(Boolean).length > 0 ? (
+              <p className="mt-1 text-sm text-slate-500">
+                {[evaluation.product, evaluation.submittedAt].filter(Boolean).join(' · ')}
+              </p>
+            ) : null}
           </div>
           <button
             type="button"
@@ -262,7 +262,6 @@ export default function AdminDashboard() {
   const [errors, setErrors] = useState([])
   const [query, setQuery] = useState('')
   const [selectedId, setSelectedId] = useState(null)
-  const [agentOverride, setAgentOverride] = useState('')
   const [busy, setBusy] = useState(false)
 
   const selected = evaluations.find((item) => item.id === selectedId) ?? null
@@ -273,7 +272,6 @@ export default function AdminDashboard() {
     if (!needle) return evaluations
     return evaluations.filter((item) =>
       [
-        item.agentName,
         item.title,
         item.ticketId,
         item.product,
@@ -297,8 +295,6 @@ export default function AdminDashboard() {
     setBusy(true)
     const nextErrors = []
     const incoming = []
-    const override = agentOverride.trim()
-
     await Promise.all(
       files.map(async (file) => {
         try {
@@ -308,13 +304,7 @@ export default function AdminDashboard() {
             nextErrors.push(`${file.name}: ${parsed.error || 'No ticket reviews found.'}`)
             return
           }
-          for (const item of parsed.evaluations) {
-            const named = item.agentName !== 'Unknown agent' ? item.agentName : parsed.agentName
-            incoming.push({
-              ...item,
-              agentName: named || override || 'Unknown agent',
-            })
-          }
+          incoming.push(...parsed.evaluations)
         } catch {
           nextErrors.push(`${file.name}: could not be read.`)
         }
@@ -329,7 +319,7 @@ export default function AdminDashboard() {
     })
     setErrors(nextErrors)
     setBusy(false)
-  }, [agentOverride])
+  }, [])
 
   function onDrop(event) {
     event.preventDefault()
@@ -420,18 +410,7 @@ export default function AdminDashboard() {
             <p className="mt-1 text-sm text-slate-500">
               Accepts one or more <span className="font-mono text-xs">.md</span> files from Export reviews.
             </p>
-            <div className="mt-4 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-center">
-              <label className="flex min-w-0 flex-1 items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-left">
-                <span className="shrink-0 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500">
-                  Agent
-                </span>
-                <input
-                  value={agentOverride}
-                  onChange={(event) => setAgentOverride(event.target.value)}
-                  placeholder="Optional name for files without one"
-                  className="min-w-0 flex-1 bg-transparent text-sm text-slate-800 outline-none placeholder:text-slate-400"
-                />
-              </label>
+            <div className="mt-4 flex justify-center">
               <button
                 type="button"
                 onClick={() => inputRef.current?.click()}
@@ -490,9 +469,7 @@ export default function AdminDashboard() {
               <MetricCard
                 label="Evaluations reviewed"
                 value={summary.total}
-                hint={`${new Set(evaluations.map((item) => item.agentName)).size} agent${
-                  new Set(evaluations.map((item) => item.agentName)).size === 1 ? '' : 's'
-                }`}
+                hint="Tickets in the imported review files"
                 tone="violet"
               />
             </div>
@@ -565,7 +542,7 @@ export default function AdminDashboard() {
                   <input
                     value={query}
                     onChange={(event) => setQuery(event.target.value)}
-                    placeholder="Filter by agent, ticket, score…"
+                    placeholder="Filter by ticket, score…"
                     className="min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-slate-400"
                   />
                 </label>
@@ -574,7 +551,6 @@ export default function AdminDashboard() {
                 <table className="min-w-full text-left text-sm">
                   <thead className="bg-slate-50 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500">
                     <tr>
-                      <th className="px-5 py-3">Agent name</th>
                       <th className="px-5 py-3">Scenario</th>
                       <th className="px-5 py-3">Score</th>
                       <th className="px-5 py-3 text-right">Actions</th>
@@ -583,7 +559,7 @@ export default function AdminDashboard() {
                   <tbody>
                     {filtered.length === 0 ? (
                       <tr>
-                        <td colSpan={4} className="px-5 py-8 text-center text-slate-500">
+                        <td colSpan={3} className="px-5 py-8 text-center text-slate-500">
                           No attempts match that filter.
                         </td>
                       </tr>
@@ -596,7 +572,6 @@ export default function AdminDashboard() {
                           }`}
                           onClick={() => setSelectedId(item.id)}
                         >
-                          <td className="px-5 py-3 font-medium text-slate-800">{item.agentName}</td>
                           <td className="px-5 py-3">
                             <p className="font-medium text-slate-800">{item.title}</p>
                             <p className="font-mono text-[11px] text-lime-dim">{item.ticketId}</p>
