@@ -5,6 +5,7 @@ import TicketPanel from './components/TicketPanel.jsx'
 import Workbench from './components/Workbench.jsx'
 import ReviewModal from './components/ReviewModal.jsx'
 import { loadScenarios } from './data/scenarios.js'
+import { countWords, isSuspectedPaste, PASTE_WORD_THRESHOLD } from './utils/composition.js'
 import { scoreSubmission, WRITING_RULES } from './utils/scoring.js'
 import { buildReviewMarkdown, downloadReviewMarkdown } from './utils/export.js'
 import {
@@ -114,6 +115,7 @@ export default function App() {
       reply: workbench.draft,
       history: workbench.history,
       submittedAt: new Date().toISOString(),
+      suspectedPaste: isSuspectedPaste(workbench.largestPasteWords, workbench.draft),
     }
     setReview(result)
     setResults((current) => ({ ...current, [scenario.id]: saved }))
@@ -224,7 +226,20 @@ export default function App() {
               history={workbench.history}
               draft={workbench.draft}
               selectedMacro={workbench.selectedMacro}
-              onDraft={(value) => patchWorkbench((current) => ({ ...current, draft: value }))}
+              onDraft={(value) =>
+                patchWorkbench((current) => ({
+                  ...current,
+                  draft: value,
+                  largestPasteWords:
+                    countWords(value) < PASTE_WORD_THRESHOLD ? 0 : (current.largestPasteWords ?? 0),
+                }))
+              }
+              onLargePaste={(count) =>
+                patchWorkbench((current) => ({
+                  ...current,
+                  largestPasteWords: Math.max(current.largestPasteWords ?? 0, count),
+                }))
+              }
               onSelectMacro={(value) => patchWorkbench((current) => ({ ...current, selectedMacro: value }))}
               onChoose={chooseOption}
               onContinue={continueStep}

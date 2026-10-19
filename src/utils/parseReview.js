@@ -248,6 +248,7 @@ function parseTicketBlock(heading, body, fileMeta) {
     intent: matchField(block, ['Intent']),
     customer: matchField(block, ['Customer']),
     submittedAt: matchField(block, ['Submitted']),
+    suspectedPaste: /suspected pasted response/i.test(matchField(block, ['Reply composition'])),
     exportedAt: fileMeta.exportedAt,
     macro: parseMacro(extractSection(block, 'Macro tag')),
     diagnosticSteps,

@@ -87,6 +87,7 @@ function renderTicket(entry, index) {
     `**Intent:** ${scenario.intent ?? '—'}  `,
     `**Customer:** ${scenario.customer?.name ?? '—'} (${scenario.customer?.company ?? '—'})  `,
     `**Submitted:** ${submitted}`,
+    ...(result.suspectedPaste ? ['**Reply composition:** Suspected pasted response'] : []),
     '',
     '### Ticket',
     '',

@@ -7,6 +7,7 @@ export const emptyWorkbench = {
   history: [],
   draft: '',
   selectedMacro: '',
+  largestPasteWords: 0,
 }
 
 export function pickRandomId(ids) {
@@ -49,6 +50,7 @@ export function sanitizeWorkbench(value) {
     history: Array.isArray(value.history) ? value.history : [],
     draft: typeof value.draft === 'string' ? value.draft : '',
     selectedMacro: typeof value.selectedMacro === 'string' ? value.selectedMacro : '',
+    largestPasteWords: Number.isFinite(value.largestPasteWords) ? value.largestPasteWords : 0,
   }
 }
 

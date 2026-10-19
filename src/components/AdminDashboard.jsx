@@ -25,6 +25,14 @@ function gradeTone(grade, score) {
   return 'bg-rose-50 text-rose-700 ring-rose-200'
 }
 
+function PasteBadge() {
+  return (
+    <span className="inline-flex items-center rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-900 ring-1 ring-amber-300">
+      Suspected pasted response
+    </span>
+  )
+}
+
 function gapTone(kind) {
   if (kind === 'keyword') return 'bg-amber-50 text-amber-800 ring-amber-200'
   return 'bg-violet-50 text-audiate ring-violet-200'
@@ -151,6 +159,7 @@ function DetailDrawer({ evaluation, onClose }) {
             >
               {evaluation.passed ? 'Pass' : 'Needs coaching'}
             </span>
+            {evaluation.suspectedPaste ? <PasteBadge /> : null}
           </div>
 
           <div className="mt-5 grid gap-2 sm:grid-cols-2">
@@ -263,7 +272,15 @@ export default function AdminDashboard() {
     const needle = query.trim().toLowerCase()
     if (!needle) return evaluations
     return evaluations.filter((item) =>
-      [item.agentName, item.title, item.ticketId, item.product, item.grade, String(item.overall)]
+      [
+        item.agentName,
+        item.title,
+        item.ticketId,
+        item.product,
+        item.grade,
+        String(item.overall),
+        item.suspectedPaste ? 'suspected pasted response' : '',
+      ]
         .join(' ')
         .toLowerCase()
         .includes(needle),
@@ -574,7 +591,9 @@ export default function AdminDashboard() {
                       filtered.map((item) => (
                         <tr
                           key={item.id}
-                          className="cursor-pointer border-t border-slate-100 hover:bg-lime/[0.06]"
+                          className={`cursor-pointer border-t border-slate-100 ${
+                            item.suspectedPaste ? 'bg-amber-50 hover:bg-amber-100/80' : 'hover:bg-lime/[0.06]'
+                          }`}
                           onClick={() => setSelectedId(item.id)}
                         >
                           <td className="px-5 py-3 font-medium text-slate-800">{item.agentName}</td>
@@ -583,14 +602,17 @@ export default function AdminDashboard() {
                             <p className="font-mono text-[11px] text-lime-dim">{item.ticketId}</p>
                           </td>
                           <td className="px-5 py-3">
-                            <span
-                              className={`inline-flex rounded-full px-2 py-0.5 text-xs font-bold ring-1 ${gradeTone(
-                                item.grade,
-                                item.overall,
-                              )}`}
-                            >
-                              {item.grade} · {item.overall}
-                            </span>
+                            <div className="flex flex-col items-start gap-1.5">
+                              <span
+                                className={`inline-flex rounded-full px-2 py-0.5 text-xs font-bold ring-1 ${gradeTone(
+                                  item.grade,
+                                  item.overall,
+                                )}`}
+                              >
+                                {item.grade} · {item.overall}
+                              </span>
+                              {item.suspectedPaste ? <PasteBadge /> : null}
+                            </div>
                           </td>
                           <td className="px-5 py-3 text-right">
                             <div className="flex justify-end gap-2">

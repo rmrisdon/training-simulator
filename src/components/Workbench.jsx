@@ -1,6 +1,7 @@
 import { Send, ListChecks, PenLine, Tags } from 'lucide-react'
 import SectionCard from './SectionCard.jsx'
 import MacroPicker from './MacroPicker.jsx'
+import { countWords, PASTE_WORD_THRESHOLD } from '../utils/composition.js'
 import { WRITING_RULES } from '../utils/scoring.js'
 
 const QUALITY_STYLES = {
@@ -55,6 +56,7 @@ export default function Workbench({
   onChoose,
   onContinue,
   onSubmit,
+  onLargePaste,
   canSubmit,
 }) {
   if (!scenario) {
@@ -67,7 +69,12 @@ export default function Workbench({
 
   const complete = stepIndex >= scenario.diagnosticSteps.length
   const step = scenario.diagnosticSteps[stepIndex]
-  const wordCount = draft.trim().split(/\s+/).filter(Boolean).length
+  const wordCount = countWords(draft)
+
+  function noteLargeInsertion(text) {
+    const count = countWords(text)
+    if (count >= PASTE_WORD_THRESHOLD) onLargePaste(count)
+  }
 
   return (
     <section className="flex h-full min-h-0 flex-col gap-4 overflow-y-auto p-5">
@@ -198,6 +205,8 @@ export default function Workbench({
         <textarea
           value={draft}
           onChange={(event) => onDraft(event.target.value)}
+          onPaste={(event) => noteLargeInsertion(event.clipboardData?.getData('text/plain') ?? '')}
+          onDrop={(event) => noteLargeInsertion(event.dataTransfer?.getData('text/plain') ?? '')}
           placeholder={`Write the customer-facing reply you would send. Aim for ${WRITING_RULES.minWords}–${WRITING_RULES.maxWords} words with an apology and a short acknowledgment, plus the documented next steps.`}
           className="min-h-[220px] w-full resize-y rounded-xl border border-slate-200 bg-white p-3 text-sm leading-relaxed text-slate-800 outline-none ring-lime/30 placeholder:text-slate-400 focus:ring-2"
         />
