@@ -20,7 +20,7 @@ export default function TicketPanel({ scenario }) {
 
   return (
     <section className="flex h-full min-h-0 flex-col gap-4 overflow-y-auto p-5">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-lime-dim">
         1 · Read the ticket
       </p>
 

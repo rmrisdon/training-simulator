@@ -29,6 +29,10 @@ function shuffled(list, random) {
   return copy
 }
 
+export function shuffleWithSeed(list, seed) {
+  return shuffled(list, mulberry32(hashString(String(seed))))
+}
+
 function familyPrefix(title) {
   const index = String(title).indexOf('::')
   return index === -1 ? String(title).trim() : String(title).slice(0, index).trim()

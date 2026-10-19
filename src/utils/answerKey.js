@@ -20,16 +20,24 @@ export function buildScenarioAnswerKey(scenario) {
     summary: scenario.summary ?? '',
     sources: scenario.sources ?? [],
     diagnostic: steps.map((step, index) => {
-      const optimal = step.options.find((option) => option.quality === 'optimal')
-      const acceptable = step.options.filter((option) => option.quality === 'acceptable')
+      const options = (step.options ?? []).map((option, optionIndex) => ({
+        position: optionIndex + 1,
+        id: option.id,
+        label: option.label,
+        quality: option.quality ?? 'poor',
+      }))
+      const optimal = options.find((option) => option.quality === 'optimal')
+      const acceptable = options.filter((option) => option.quality === 'acceptable')
       return {
         index: index + 1,
         prompt: step.prompt,
+        options,
         optimalLabel: optimal?.label ?? '',
-        optimalFeedback: optimal?.feedback ?? '',
+        optimalPosition: optimal?.position ?? null,
+        optimalFeedback: step.options?.find((option) => option.quality === 'optimal')?.feedback ?? '',
         acceptable: acceptable.map((option) => ({
           label: option.label,
-          feedback: option.feedback ?? '',
+          position: option.position,
         })),
       }
     }),
@@ -75,11 +83,16 @@ function renderScenarioMarkdown(entry) {
 
   for (const step of entry.diagnostic) {
     lines.push(`**Step ${step.index}.** ${step.prompt}`)
-    lines.push(`- Optimal (full credit): ${step.optimalLabel || '—'}`)
-    if (step.acceptable.length > 0) {
-      for (const option of step.acceptable) {
-        lines.push(`- Acceptable (half credit): ${option.label}`)
-      }
+    lines.push('')
+    lines.push('Choices in the order shown to the agent:')
+    for (const option of step.options ?? []) {
+      const mark =
+        option.quality === 'optimal'
+          ? 'optimal, full credit'
+          : option.quality === 'acceptable'
+            ? 'acceptable, half credit'
+            : 'incorrect'
+      lines.push(`${option.position}. (${mark}) ${option.label}`)
     }
     lines.push('')
   }
@@ -166,6 +179,8 @@ export function buildAnswerKeyMarkdown(scenarios, exportedAt = new Date()) {
     `**Writing — acknowledgment (${acknowledgmentPoints} pts):** ${acknowledgmentExamples.join(', ')}, or similar phrasing.`,
     '',
     'Pass mark for coaching dashboards is 70/100.',
+    '',
+    'Agents see a **random current ticket** plus one **on-deck** ticket. Diagnostic choices are shuffled per step — the correct answer is **not** always the first option. Look up the Ticket ID from the review export (for example `TS-260801`) in this key.',
     '',
     '---',
     '',

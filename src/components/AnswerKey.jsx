@@ -65,14 +65,28 @@ function ScenarioKey({ entry, open, onToggle }) {
                   <p className="text-sm font-medium text-slate-800">
                     Step {step.index}. {step.prompt}
                   </p>
-                  <p className="mt-2 text-sm text-lime-dim">
-                    <span className="font-semibold">Optimal:</span> {step.optimalLabel || '—'}
-                  </p>
-                  {step.acceptable.map((option) => (
-                    <p key={option.label} className="mt-1 text-sm text-amber-800">
-                      <span className="font-semibold">Acceptable (half):</span> {option.label}
-                    </p>
-                  ))}
+                  <ol className="mt-2 space-y-1.5">
+                    {(step.options ?? []).map((option) => {
+                      const tone =
+                        option.quality === 'optimal'
+                          ? 'text-lime-dim'
+                          : option.quality === 'acceptable'
+                            ? 'text-amber-800'
+                            : 'text-slate-500'
+                      const mark =
+                        option.quality === 'optimal'
+                          ? 'Optimal'
+                          : option.quality === 'acceptable'
+                            ? 'Acceptable'
+                            : 'Incorrect'
+                      return (
+                        <li key={option.id || option.label} className={`text-sm leading-snug ${tone}`}>
+                          <span className="font-mono text-[11px] text-slate-400">{option.position}.</span>{' '}
+                          <span className="font-semibold">{mark}:</span> {option.label}
+                        </li>
+                      )
+                    })}
+                  </ol>
                 </li>
               ))}
             </ol>
@@ -237,6 +251,11 @@ export default function AnswerKey() {
             </tbody>
           </table>
         </div>
+        <p className="mt-3 text-xs leading-relaxed text-slate-500">
+          Agents receive a random current ticket plus one on-deck ticket. Diagnostic choices are shuffled per
+          step, so the correct answer is not always listed first. Search this key by Ticket ID from the review
+          export (for example TS-260801).
+        </p>
         <p className="mt-3 text-xs leading-relaxed text-slate-500">
           Apology language: {WRITING_RULES.apologyExamples.join(', ')}. Acknowledgment language:{' '}
           {WRITING_RULES.acknowledgmentExamples.join(', ')}, or similar.

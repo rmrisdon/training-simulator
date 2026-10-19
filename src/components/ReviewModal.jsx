@@ -44,7 +44,7 @@ export default function ReviewModal({ result, scenario, onRevise, onClose }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="review-title"
-        className="my-6 w-full max-w-2xl rounded-2xl border border-slate-200 bg-white p-5 shadow-pop sm:p-6"
+        className="my-6 w-full max-w-2xl rounded-2xl border border-slate-200 border-t-[5px] border-t-lime bg-white p-5 shadow-pop sm:p-6"
         onClick={(event) => event.stopPropagation()}
       >
         <div className="flex items-start justify-between gap-3">

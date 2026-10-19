@@ -1,5 +1,4 @@
 export const STORAGE_KEY = 'ts-escalation-simulator'
-export const QUEUE_SIZE = 5
 
 export const emptyWorkbench = {
   stepIndex: 0,
@@ -10,24 +9,35 @@ export const emptyWorkbench = {
   selectedMacro: '',
 }
 
-export function shuffleIds(ids, count = QUEUE_SIZE) {
-  const copy = [...ids]
-  for (let i = copy.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[copy[i], copy[j]] = [copy[j], copy[i]]
-  }
-  return copy.slice(0, Math.min(count, copy.length))
+export function pickRandomId(ids) {
+  if (!Array.isArray(ids) || ids.length === 0) return null
+  return ids[Math.floor(Math.random() * ids.length)]
 }
 
-export function resolveQueue(allIds, storedIds, count = QUEUE_SIZE) {
+export function pickNextTicket(allIds, excludeIds = [], reviewedIds = []) {
+  const preferredExclude = (excludeIds ?? []).filter(Boolean)
+  const excluded = new Set(preferredExclude)
+  const reviewed = new Set(reviewedIds ?? [])
+  const available = allIds.filter((id) => !excluded.has(id))
+  const currentId = preferredExclude[0]
+  const pool = available.length > 0 ? available : allIds.filter((id) => id !== currentId)
+  if (pool.length === 0) return null
+  const unread = pool.filter((id) => !reviewed.has(id))
+  return pickRandomId(unread.length > 0 ? unread : pool)
+}
+
+export function resolveSessionPair(allIds, stored) {
   const valid = new Set(allIds)
-  const kept = (storedIds ?? []).filter((id) => valid.has(id))
-  if (kept.length >= count) return kept.slice(0, count)
-  const fill = shuffleIds(
-    allIds.filter((id) => !kept.includes(id)),
-    count - kept.length,
-  )
-  return [...kept, ...fill]
+  const queue = (stored?.queueIds ?? []).filter((id) => valid.has(id))
+  let selectedId = valid.has(stored?.selectedId) ? stored.selectedId : null
+  let onDeckId = valid.has(stored?.onDeckId) ? stored.onDeckId : null
+
+  if (!selectedId) selectedId = queue[0] ?? pickRandomId(allIds)
+  if (!onDeckId || onDeckId === selectedId) {
+    onDeckId = queue.find((id) => id !== selectedId) ?? pickNextTicket(allIds, [selectedId])
+  }
+
+  return { selectedId: selectedId ?? null, onDeckId: onDeckId ?? null }
 }
 
 export function sanitizeWorkbench(value) {
@@ -51,6 +61,7 @@ export function readPersisted() {
     return {
       queueIds: Array.isArray(data.queueIds) ? data.queueIds.filter((id) => typeof id === 'string') : [],
       selectedId: typeof data.selectedId === 'string' ? data.selectedId : null,
+      onDeckId: typeof data.onDeckId === 'string' ? data.onDeckId : null,
       results: data.results && typeof data.results === 'object' ? data.results : {},
       workbenches: data.workbenches && typeof data.workbenches === 'object' ? data.workbenches : {},
     }
@@ -64,9 +75,9 @@ export function writePersisted(state) {
     localStorage.setItem(
       STORAGE_KEY,
       JSON.stringify({
-        version: 1,
-        queueIds: state.queueIds,
+        version: 2,
         selectedId: state.selectedId,
+        onDeckId: state.onDeckId,
         results: state.results,
         workbenches: state.workbenches,
       }),

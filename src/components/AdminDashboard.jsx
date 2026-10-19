@@ -44,12 +44,12 @@ function recTone(type) {
 
 function MetricCard({ label, value, hint, tone = 'lime' }) {
   const accents = {
-    lime: 'border-l-lime',
-    teal: 'border-l-camtasia',
-    violet: 'border-l-audiate',
+    lime: 'border-l-lime bg-white',
+    teal: 'border-l-camtasia bg-white',
+    violet: 'border-l-audiate bg-white',
   }
   return (
-    <div className={`rounded-xl border border-slate-200 border-l-4 bg-white p-5 shadow-card ${accents[tone]}`}>
+    <div className={`rounded-xl border border-slate-200 border-l-4 p-5 shadow-card ${accents[tone]}`}>
       <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">{label}</p>
       <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900">{value}</p>
       {hint ? <p className="mt-1 text-xs text-slate-500">{hint}</p> : null}
@@ -105,7 +105,7 @@ function DetailDrawer({ evaluation, onClose }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="eval-drawer-title"
-        className="flex h-full w-full max-w-xl flex-col border-l border-slate-200 bg-white shadow-pop"
+        className="flex h-full w-full max-w-xl flex-col border-l-[5px] border-l-lime bg-white shadow-pop"
         onClick={(event) => event.stopPropagation()}
       >
         <div className="flex shrink-0 items-start justify-between gap-3 border-b border-slate-200 px-5 py-4">
@@ -326,7 +326,7 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col overflow-y-auto bg-[#f4f6f8]">
+    <div className="flex min-h-0 flex-1 flex-col overflow-y-auto bg-transparent">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-5 py-6">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
@@ -391,8 +391,8 @@ export default function AdminDashboard() {
           }}
           onDragLeave={() => setDragOver(false)}
           onDrop={onDrop}
-          className={`rounded-2xl border-2 border-dashed bg-white p-6 shadow-card transition ${
-            dragOver ? 'border-lime bg-lime/10' : 'border-slate-300'
+          className={`rounded-2xl border-2 border-dashed p-6 shadow-card transition ${
+            dragOver ? 'border-lime bg-lime/10' : 'border-slate-300 bg-white'
           }`}
         >
           <div className="flex flex-col items-center text-center">
@@ -449,7 +449,7 @@ export default function AdminDashboard() {
 
         {evaluations.length === 0 ? (
           <div className="rounded-2xl border border-slate-200 bg-white px-6 py-16 text-center shadow-card">
-            <ClipboardCheck size={28} className="mx-auto text-slate-300" />
+            <ClipboardCheck size={28} className="mx-auto text-lime-dim" />
             <h3 className="mt-3 text-lg font-semibold text-slate-900">No evaluations loaded</h3>
             <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-slate-500">
               Export a review from the Agent Simulator, then drop the Markdown file here to see scores, gaps, and

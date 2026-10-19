@@ -1,4 +1,4 @@
-import { Send, RotateCcw, ListChecks, PenLine, Tags } from 'lucide-react'
+import { Send, ListChecks, PenLine, Tags } from 'lucide-react'
 import SectionCard from './SectionCard.jsx'
 import MacroPicker from './MacroPicker.jsx'
 import { WRITING_RULES } from '../utils/scoring.js'
@@ -6,8 +6,41 @@ import { WRITING_RULES } from '../utils/scoring.js'
 const QUALITY_STYLES = {
   optimal: 'text-lime-dim',
   acceptable: 'text-snagit',
-  poor: 'text-rose-600',
+  poor: 'text-rose-700',
 }
+
+const QUALITY_PANEL = {
+  optimal: 'border-lime/30 bg-lime/10',
+  acceptable: 'border-orange-200 bg-orange-50',
+  poor: 'border-rose-200 bg-rose-50',
+}
+
+const STEPS = [
+  {
+    label: 'Diagnose',
+    active: 'bg-camtasia text-white',
+    idle: 'bg-white text-slate-400 ring-1 ring-slate-200',
+    ready: 'bg-white text-camtasia ring-1 ring-camtasia/30',
+  },
+  {
+    label: 'Tag',
+    active: 'bg-screencast text-white',
+    idle: 'bg-white text-slate-400 ring-1 ring-slate-200',
+    ready: 'bg-white text-screencast ring-1 ring-screencast/30',
+  },
+  {
+    label: 'Draft',
+    active: 'bg-snagit text-white',
+    idle: 'bg-white text-slate-400 ring-1 ring-slate-200',
+    ready: 'bg-white text-snagit ring-1 ring-snagit/30',
+  },
+  {
+    label: 'Submit',
+    active: 'bg-lime text-ink-950',
+    idle: 'bg-white text-slate-400 ring-1 ring-slate-200',
+    ready: 'bg-lime/20 text-ink-950 ring-1 ring-lime/40',
+  },
+]
 
 export default function Workbench({
   scenario,
@@ -22,7 +55,6 @@ export default function Workbench({
   onChoose,
   onContinue,
   onSubmit,
-  onReset,
   canSubmit,
 }) {
   if (!scenario) {
@@ -39,22 +71,12 @@ export default function Workbench({
 
   return (
     <section className="flex h-full min-h-0 flex-col gap-4 overflow-y-auto p-5">
-      <div className="flex items-center justify-between gap-3">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-          2 · Diagnose · 3 · Tag · 4 · Reply
-        </p>
-        <button
-          type="button"
-          onClick={onReset}
-          className="inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-xs text-slate-500 hover:bg-white hover:text-slate-800"
-        >
-          <RotateCcw size={12} />
-          Reset ticket
-        </button>
-      </div>
+      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-camtasia">
+        2 · Diagnose · 3 · Tag · 4 · Reply
+      </p>
 
       <div className="grid grid-cols-4 gap-2">
-        {['Diagnose', 'Tag', 'Draft', 'Submit'].map((label, index) => {
+        {STEPS.map((stepMeta, index) => {
           const tagged = Boolean(selectedMacro)
           const state =
             !complete && index === 0
@@ -68,16 +90,10 @@ export default function Workbench({
                     : 'idle'
           return (
             <div
-              key={label}
-              className={`rounded-lg px-3 py-2 text-center text-[11px] font-bold uppercase tracking-wide ${
-                state === 'active'
-                  ? 'bg-lime text-ink-950'
-                  : state === 'ready'
-                    ? 'bg-white text-snagit ring-1 ring-snagit/30'
-                    : 'bg-white text-slate-400 ring-1 ring-slate-200'
-              }`}
+              key={stepMeta.label}
+              className={`rounded-lg px-3 py-2 text-center text-[11px] font-bold uppercase tracking-wide ${stepMeta[state]}`}
             >
-              {index + 1} · {label}
+              {index + 1} · {stepMeta.label}
             </div>
           )
         })}
@@ -128,7 +144,7 @@ export default function Workbench({
           </div>
 
           {lastFeedback && (
-            <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-3">
+            <div className={`mt-4 rounded-xl border p-3 ${QUALITY_PANEL[lastFeedback.quality] ?? QUALITY_PANEL.poor}`}>
               <p className={`text-xs font-bold uppercase tracking-wider ${QUALITY_STYLES[lastFeedback.quality]}`}>
                 {lastFeedback.quality}
               </p>
